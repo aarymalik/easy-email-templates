@@ -1,0 +1,186 @@
+<!--
+  EMAIL 6 of 6 — "Early warning email (New)"
+  Rebuilt from Figma frame (Rocket Loans branding).
+  Trigger: client turned autopay off — check in ahead of upcoming payment.
+  Colors/fonts per client spec (2026-07-09):
+    Body text:   #101828
+    Footer text: #364153
+    Button bg:   #8B2E2E
+    Tabs text:   #101828
+    Font:        Arial, 16px body/tabs, 14px subject line & footer
+  NOTE: divider/border color and outer wrapper background not yet
+  specified — using light-gray wrapper (#f4f4f4) and #e5e5e5 divider
+  as placeholder defaults. Flag with client/Peter Le if these need to
+  match exactly.
+
+  IMPORTANT: every style that matters is INLINE. This email previously relied on
+  CSS classes in the <style> block (.email-container, .body-cell, .btn-link, bare `p`),
+  which Outlook mobile strips — the white card, all padding and the button background
+  disappeared. The <style> block below is now only for mobile media queries, which are
+  progressive enhancement: if a client drops them, the email still renders correctly.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="x-apple-disable-message-reformatting">
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
+<title>Having trouble paying?</title>
+
+<!--[if mso]>
+<noscript><xml>
+  <o:OfficeDocumentSettings>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+    <o:AllowPNG/>
+  </o:OfficeDocumentSettings>
+</xml></noscript>
+<style>
+  table, td, div, h1, h2, h3, p, a, span { font-family: Arial, sans-serif !important; }
+  /* Outlook desktop ignores media queries, so it needs the desktop nav sizing here */
+  .nav-link { font-size:16px !important; margin:0 10px !important; padding-bottom:10px !important; }
+  .nav-row  { padding-bottom:80px !important; }
+</style>
+<![endif]-->
+
+<style type="text/css">
+  html, body { margin:0 !important; padding:0 !important; height:100% !important; width:100% !important; }
+  * { -ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; }
+  table, td { mso-table-lspace:0pt !important; mso-table-rspace:0pt !important; border-collapse:collapse !important; }
+  img { -ms-interpolation-mode:bicubic; border:0; height:auto; line-height:100%; outline:none; text-decoration:none; }
+  a { text-decoration:none; }
+  u + #body a, #MessageViewBody a { color:inherit; text-decoration:none; font-size:inherit; font-family:inherit; font-weight:inherit; line-height:inherit; }
+
+  @media only screen and (max-width:600px) {
+    .wrap     { width:100% !important; max-width:100% !important; }
+    .gutter   { padding-left:20px !important; padding-right:20px !important; }
+  }
+
+  /* The nav is MOBILE-FIRST: the small sizing is inline so it always applies, even in
+     clients that drop this <style> block (which is what left the links at desktop size on
+     mobile). Desktop is the bump-up, handled here and in the mso block for Outlook desktop. */
+  @media only screen and (min-width:601px) {
+    .nav-link { font-size:16px !important; margin:0 10px !important; padding-bottom:10px !important; }
+    .nav-row  { padding-bottom:80px !important; }
+  }
+</style>
+</head>
+
+<body id="body" style="margin:0; padding:0; width:100%; background-color:#f4f4f4;">
+
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#f4f4f4" style="background-color:#f4f4f4;">
+<tr>
+<td align="center" style="padding:0;">
+
+  <!--[if mso]><table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" width="600"><tr><td><![endif]-->
+
+  <!-- width=100% + inline max-width (not a fixed 600px + media query): this stays fluid on
+       mobile even if a client drops the <style> block, so it can never overflow the screen. -->
+  <table role="presentation" class="wrap" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#FFFFFF" style="width:100%; max-width:600px; margin:0 auto; background-color:#FFFFFF;">
+
+    <!-- SUBJECT / PREHEADER ROW -->
+    <tr>
+      <td class="gutter" align="left" style="padding:16px 32px 0 32px; font-family:Arial,Helvetica,sans-serif; font-weight:400; font-size:14px; line-height:20px; color:#364153;">
+        Subject: Having trouble paying?
+      </td>
+    </tr>
+
+    <!-- LOGO -->
+    <tr>
+      <td class="gutter" align="center" style="padding:24px 32px 8px 32px; text-align:center;">
+        <img src="https://framerusercontent.com/images/n94JU1BM02w9MKHVv8EXtExXNI8.png?width=332&amp;height=35" width="332" height="35" alt="Rocket Loans" style="display:block; margin:0 auto; width:332px; max-width:100%; height:auto; border:0;">
+      </td>
+    </tr>
+
+    <!-- NAV TABS -->
+    <tr>
+      <!-- Mobile-first sizing inline (12px / 6px gaps / 40px below). Desktop bumps up via the
+           min-width media query + the mso block. Underline is #767676 rather than near-black:
+           dark-mode clients recolour text but not border-colour, so #101828 stayed dark and
+           vanished against a dark background. A mid tone reads on both. -->
+      <td class="gutter nav-row" align="center" style="padding:20px 32px 40px 32px; text-align:center;">
+        <a href="https://www.rocketloans.com/" class="nav-link" style="display:inline-block; font-family:Arial,Helvetica,sans-serif; font-weight:400; font-size:12px; line-height:100%; color:#364153; text-decoration:none; padding:0 0 6px 0; border-bottom:2px solid #767676; margin:0 6px;">MY DASHBOARD</a>
+        <a href="mailto:[[SUPPORT_EMAIL]]" class="nav-link" style="display:inline-block; font-family:Arial,Helvetica,sans-serif; font-weight:400; font-size:12px; line-height:100%; color:#364153; text-decoration:none; padding:0 0 6px 0; border-bottom:2px solid #767676; margin:0 6px;">EMAIL US</a>
+        <a href="tel:313-230-5233" class="nav-link" style="display:inline-block; font-family:Arial,Helvetica,sans-serif; font-weight:400; font-size:12px; line-height:100%; color:#364153; text-decoration:none; padding:0 0 6px 0; border-bottom:2px solid #767676; margin:0 6px;">CALL US</a>
+      </td>
+    </tr>
+
+    <!-- BODY -->
+    <tr>
+      <td class="gutter" style="padding:8px 32px 32px 32px;">
+
+        <p style="margin:0 0 20px 0; font-family:Arial,Helvetica,sans-serif; font-weight:400; font-size:16px; line-height:22px; color:#101828;">Hi [[Customer Name]],</p>
+
+        <p style="margin:0 0 20px 0; font-family:Arial,Helvetica,sans-serif; font-weight:400; font-size:16px; line-height:22px; color:#101828;">We noticed that you recently turned autopay off, and we just wanted to check in ahead of your upcoming loan payment on [[Due Date]].</p>
+
+        <p style="margin:0 0 20px 0; font-family:Arial,Helvetica,sans-serif; font-weight:500; font-size:18px; line-height:22px; color:#101828;">If you're having trouble paying:</p>
+
+        <p style="margin:0 0 20px 0; font-family:Arial,Helvetica,sans-serif; font-weight:400; font-size:16px; line-height:22px; color:#101828;">&nbsp;&nbsp;&bull;&nbsp;&nbsp;Call our team at <a href="tel:313-230-5233" style="color:#101828; text-decoration:underline; font-weight:bold;">(313)-230-5233</a> if you think you'll miss your next payment.</p>
+
+        <p style="margin:0 0 20px 0; font-family:Arial,Helvetica,sans-serif; font-weight:400; font-size:16px; line-height:22px; color:#101828;">If you're experiencing a change in your financial situation, please let us know &ndash; we're here to help however we can.</p>
+
+        <p style="margin:0 0 20px 0; font-family:Arial,Helvetica,sans-serif; font-weight:400; font-size:16px; line-height:22px; color:#101828;">Thanks for being a valued client,<br>Rocket Loans</p>
+
+        <!-- CTA -->
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td align="center" style="padding:8px 0 24px 0;">
+              <!-- Outlook desktop ignores padding on <a>, collapsing the button, so it gets a
+                   VML button instead. Other clients use the inline-styled link below. -->
+              <!--[if mso]>
+              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.rocketloans.com/" style="height:46px; v-text-anchor:middle; width:172px;" arcsize="22%" stroke="f" fillcolor="#8B2E2E">
+                <w:anchorlock/>
+                <center style="color:#FFFFFF; font-family:Arial,sans-serif; font-size:16px; font-weight:700;">My dashboard</center>
+              </v:roundrect>
+              <![endif]-->
+              <!--[if !mso]><!-- -->
+              <a href="https://www.rocketloans.com/" style="display:inline-block; padding:14px 32px; background-color:#8B2E2E; border-radius:10px; font-family:Arial,Helvetica,sans-serif; font-size:16px; font-weight:700; line-height:18px; color:#ffffff; text-decoration:none; -webkit-text-size-adjust:none;">My dashboard</a>
+              <!--<![endif]-->
+            </td>
+          </tr>
+        </table>
+
+        <!-- DIVIDER -->
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0;">
+          <tr>
+            <td style="border-top:1px solid #e5e5e5; font-size:0; line-height:0; height:1px;">&nbsp;</td>
+          </tr>
+        </table>
+
+      </td>
+    </tr>
+
+    <!-- FOOTER -->
+    <tr>
+      <td class="gutter" style="padding:24px 32px 32px 32px;">
+
+        <p style="margin:0 0 12px 0; font-family:Arial,Helvetica,sans-serif; font-weight:400; font-size:14px; line-height:22px; color:#364153;">
+          <a href="#" style="color:#364153; text-decoration:underline;">Notice to ServiceMembers</a>
+        </p>
+
+        <p style="margin:0 0 12px 0; font-family:Arial,Helvetica,sans-serif; font-weight:400; font-size:14px; line-height:22px; color:#364153;">
+          ServiceMembers on "active duty" or "active service" may be entitled to certain legal protections and debt relief pursuant to the Servicemembers Civil Relief Act (SCRA). For questions about the SCRA, servicemembers should contact their unit's Judge Advocate, or their installation's Legal Assistance Officer. A military legal assistance office locator for all branches of the Armed Forces is available at <a href="https://legalassistance.law.af.mil/" style="color:#364153; text-decoration:underline;">https://legalassistance.law.af.mil/</a>. You can also contact our SCRA representative at <a href="mailto:Compliance@RocketLoans.com" style="color:#364153; text-decoration:underline;">Compliance@RocketLoans.com</a>.
+        </p>
+
+        <p style="margin:0 0 12px 0; font-family:Arial,Helvetica,sans-serif; font-weight:400; font-size:14px; line-height:22px; color:#364153;">Copyright protected 2025 RockLoans Marketplace. All rights reserved.</p>
+
+        <p style="margin:0; font-family:Arial,Helvetica,sans-serif; font-weight:400; font-size:14px; line-height:22px; color:#364153;">
+          <a href="https://www.rocketloans.com/terms-of-use" style="color:#364153; text-decoration:underline;">Terms</a>&nbsp;&nbsp;<a href="https://rocketaccount.com/#/privacy-policy" style="color:#364153; text-decoration:underline;">Privacy</a>
+        </p>
+
+      </td>
+    </tr>
+
+  </table>
+
+  <!--[if mso]></td></tr></table><![endif]-->
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>
