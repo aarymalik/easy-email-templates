@@ -1,0 +1,371 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="x-apple-disable-message-reformatting">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<title>Next: Choose your way to pay</title>
+
+<!--
+  In-Process Repayment (Status 400) - "Choose a repayment method".
+  Built from Figma node 45:376 (desktop frame 45:444 / mobile frame 45:377).
+    SL: Next: Choose your way to pay
+    PH: You're so close to getting your funds, %%FirstName%%.
+
+  NOTE ON THE FILE NAME: the Figma section is labelled "Email 1 - Choose a repayment method",
+  but 45:897 (already built as Email1-new-offer.html) is also labelled Email 1. This one is
+  numbered 2 because its progress bar sits further along (94% vs 72%). Rename if the journey
+  order says otherwise.
+
+  Figma measurements carried over:
+    - 24px vertical rhythm between every body block; gutters 32px desktop / 24px mobile
+    - hero 56/62 desktop -> 32/35 mobile; body 16/24; "Need some support?" 24px Medium BOTH viewports
+    - progress track 6px #F2F2F2, fill #DE3341 at 94% desktop / 88% mobile, labels 14px Medium
+    - info bar #F7F7F7 radius 8, padding 32/40 desktop -> 32/32 mobile, 24px icon + 16px gap
+    - CTA button 222x51 desktop (padding 13/24), full width mobile
+    - support image 368x177 desktop / 302x187 mobile (two different crops, swapped like other templates)
+    - footer 40px/32px padding desktop, EHL 62px -> 52px mobile
+
+  Deliberate deviations from the Figma, all following the repo's documented rules:
+    - outlined phone button uses a #767676 border, not the Figma's #111. Near-black outlines
+      turn into hard black boxes in Outlook dark mode (see README "Rendering gotchas").
+    - the divider is a painted 1px #E9E9E9 cell rather than an SVG, because Word ignores
+      border-top on a zero-height element.
+    - phone icon is rendered at 20px, not the Figma's 29px, to match the support bar shipping
+      in the other 22 templates.
+
+  DARK MODE: the Figma has no dark frame, so the dark palette below is set here, in one place,
+  and applied through .dk-* classes. Every element also carries its LIGHT value inline, so any
+  client that ignores the media query (Outlook/Word, and Gmail's own inversion) still renders
+  the light design correctly. Palette: page #0E0E0E, card #1B1B1B, secondary surface #262626,
+  text #FFFFFF / #EDEDED, hairlines #4A4A4A, brand #DE3341 unchanged.
+  Only one asset is swapped rather than recoloured, because a PNG cannot be restyled: the
+  lightbulb (#111 stroke -> white stroke). The logo needs no dark cut - the wordmark this repo
+  ships is #DE3341 on transparent, so it reads on both grounds (note this is already a deviation
+  from the Figma header, which draws the wordmark in black; the red cut is what all 37 other
+  files use). The EHL badge and the phone glyph carry their own light fill, so they stay legible
+  on dark; the phone glyph is just rounded into a white circle.
+
+  ASSETS - TEMPORARY HOST. Four assets in this email are new and are not on the Rocket CDN yet.
+  They are committed at In-Process-Repayment/images/ and are served here from this repo's raw
+  GitHub URLs (branch in-process-repayment-email-2) so the email previews correctly. Re-host them on framerusercontent.com (like every
+  other asset in this repo) and swap the four src values marked "TEMP HOST" before any real send.
+-->
+
+<!--[if mso]>
+<noscript><xml>
+  <o:OfficeDocumentSettings>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+    <o:AllowPNG/>
+  </o:OfficeDocumentSettings>
+</xml></noscript>
+<style>
+  table, td, div, h1, h2, h3, p, a, span { font-family: Arial, sans-serif !important; }
+  .fine, .fine p, .fine a, .fine span { font-family: 'Arial Narrow', Arial, sans-serif !important; }
+</style>
+<![endif]-->
+
+<!--[if mso]>
+<style type="text/css">
+  v\:textbox, o\:smarttagtype { display:none !important; }
+  a:link, span.msoIns, span.msoDel { text-decoration:none !important; }
+</style>
+<![endif]-->
+
+<style type="text/css">
+  @font-face { font-family:'WNTL Text';    src:url('https://www.rocketmortgage.com/nsassets/fonts/wntl/WNTL_Text_Web_Regular.woff2')     format('woff2'); font-weight:400; font-style:normal; }
+  @font-face { font-family:'WNTL Text';    src:url('https://www.rocketmortgage.com/nsassets/fonts/wntl/WNTL_Text_Web_Medium.woff2')      format('woff2'); font-weight:500; font-style:normal; }
+
+  html, body { margin:0 !important; padding:0 !important; height:100% !important; width:100% !important; }
+  * { -ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; }
+  table, td { mso-table-lspace:0pt !important; mso-table-rspace:0pt !important; border-collapse:collapse !important; }
+  img { -ms-interpolation-mode:bicubic; border:0; height:auto; line-height:100%; outline:none; text-decoration:none; }
+  a { text-decoration:none; }
+  u + #body a, #MessageViewBody a { color:inherit; text-decoration:none; font-size:inherit; font-family:inherit; font-weight:inherit; line-height:inherit; }
+
+  /* ---------------------------------------------------------
+     DARK MODE
+     Apple Mail, iOS Mail, Outlook for Mac/iOS and Gmail on iOS honour the media query.
+     Outlook.com / Windows Mail rewrite the markup instead, so every rule is repeated
+     under [data-ogsc]. Outlook 2016-2021 (Word) supports neither and stays light.
+     --------------------------------------------------------- */
+  @media (prefers-color-scheme: dark) {
+    .dk-page    { background-color:#0E0E0E !important; }
+    .dk-card    { background-color:#1B1B1B !important; }
+    .dk-surface { background-color:#262626 !important; }
+    .dk-h       { color:#FFFFFF !important; }
+    .dk-t, .dk-t p, .dk-t span, .dk-t strong { color:#EDEDED !important; }
+    .dk-t2, .dk-t2 a { color:#B3B3B3 !important; }
+    .dk-bd      { border-bottom-color:#4A4A4A !important; }
+    .dk-div     { background-color:#4A4A4A !important; }
+    .dk-track   { background-color:#3D3D3D !important; }
+    .dk-rest    { background-color:#3D3D3D !important; }
+    .dk-ol a    { border-color:#767676 !important; color:#FFFFFF !important; }
+    .dk-link a  { color:#FFFFFF !important; }
+    .phone-ico  { border-radius:50% !important; }
+    .ico-lt     { display:none !important; max-height:0 !important; overflow:hidden !important; }
+    .ico-dk     { display:block !important; max-height:none !important; overflow:visible !important; }
+  }
+
+  [data-ogsc] .dk-page    { background-color:#0E0E0E !important; }
+  [data-ogsc] .dk-card    { background-color:#1B1B1B !important; }
+  [data-ogsc] .dk-surface { background-color:#262626 !important; }
+  [data-ogsc] .dk-h       { color:#FFFFFF !important; }
+  [data-ogsc] .dk-t, [data-ogsc] .dk-t p, [data-ogsc] .dk-t span, [data-ogsc] .dk-t strong { color:#EDEDED !important; }
+  [data-ogsc] .dk-t2, [data-ogsc] .dk-t2 a { color:#B3B3B3 !important; }
+  [data-ogsc] .dk-bd      { border-bottom-color:#4A4A4A !important; }
+  [data-ogsc] .dk-div     { background-color:#4A4A4A !important; }
+  [data-ogsc] .dk-track   { background-color:#3D3D3D !important; }
+  [data-ogsc] .dk-rest    { background-color:#3D3D3D !important; }
+  [data-ogsc] .dk-ol a    { border-color:#767676 !important; color:#FFFFFF !important; }
+  [data-ogsc] .dk-link a  { color:#FFFFFF !important; }
+  [data-ogsc] .phone-ico  { border-radius:50% !important; }
+  [data-ogsc] .ico-lt     { display:none !important; max-height:0 !important; overflow:hidden !important; }
+  [data-ogsc] .ico-dk     { display:block !important; max-height:none !important; overflow:visible !important; }
+
+  @media screen and (max-width:820px) {
+    .wrap { width:100% !important; max-width:100% !important; }
+  }
+
+  @media screen and (max-width:640px) {
+    .stack        { width:100% !important; display:block !important; max-width:100% !important; box-sizing:border-box !important; }
+    .gutter       { padding-left:24px !important; padding-right:24px !important; box-sizing:border-box !important; }
+    .btn-full a   { display:block !important; width:auto !important; text-align:center !important; }
+    /* mobile type is taken from the Figma MOBILE frame: hero drops 56 -> 32/35,
+       but "Need some support?" stays 24px on both viewports, so it has no override. */
+    .h-hero       { font-size:32px !important; line-height:35px !important; }
+    .logo-d       { display:none !important; max-height:0 !important; overflow:hidden !important; }
+    .logo-m       { display:block !important; max-height:none !important; overflow:visible !important; }
+    .hero-d       { display:none !important; max-height:0 !important; overflow:hidden !important; }
+    .hero-m       { display:block !important; max-height:none !important; overflow:visible !important; width:100% !important; height:auto !important; }
+    /* progress fill is 94% on the desktop frame and 88% on the mobile frame */
+    .bar-fill     { width:88% !important; }
+    .bar-rest     { width:12% !important; }
+    /* the Figma mobile info bar tightens its side padding 40px -> 32px */
+    .info-pad     { padding-left:32px !important; padding-right:32px !important; }
+    .foot-pad     { padding-left:24px !important; padding-right:24px !important; }
+    /* the Figma mobile footer tightens 40px -> 32px top and bottom */
+    .foot-top     { padding-top:32px !important; }
+    .foot-bot     { padding-bottom:32px !important; }
+    .pad-right    { padding-right:0 !important; padding-bottom:24px !important; }
+    .ehl img      { width:52px !important; height:52px !important; }
+  }
+
+</style>
+</head>
+
+<body id="body" class="dk-page" style="margin:0; padding:0; width:100%; background-color:#F5F5F5;">
+
+<!-- PREHEADER -->
+<div style="display:none; font-size:1px; line-height:1px; max-height:0; max-width:0; opacity:0; overflow:hidden; mso-hide:all; font-family:Arial,sans-serif; color:#FFFFFF !important;background-color: none !important;">
+  You&rsquo;re so close to getting your funds, %%FirstName%%.
+  &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847;
+</div>
+
+<table role="presentation" class="dk-page" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#F5F5F5" style="background-color:#F5F5F5;">
+<tr>
+<td align="center" style="padding:0;">
+
+  <!--[if mso]><table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" width="800"><tr><td><![endif]-->
+
+  <!-- width=100% + inline max-width keeps the shell fluid even if a client drops the <style> block -->
+  <table role="presentation" class="wrap dk-card" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#FFFFFF" style="width:100%; max-width:800px; margin:0 auto; background-color:#FFFFFF;">
+
+    <!-- ========================================================
+         HEADER
+         ======================================================== -->
+    <tr>
+      <td class="dk-bd" style="padding:0 24px; height:90px; border-bottom:1px solid #E9E9E9;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+          <tr>
+            <td align="left" valign="middle" style="padding:33px 0;">
+              <a href="https://www.rocketloans.com/" style="text-decoration:none; border:0;"><img src="https://framerusercontent.com/images/tu166SmwTWTOOIe92b9naywA4.png?width=456&height=48" width="228" height="24" alt="Rocket Loans" class="logo-d" style="display:block; width:228px; height:24px; border:0;"></a>
+              <!--[if !mso]><!-- -->
+              <a href="https://www.rocketloans.com/" style="text-decoration:none; border:0;"><img src="https://framerusercontent.com/images/f5z7Va2SUwiUtrTRTOQVabKLzKo.png?width=205&height=64" width="120" height="38" alt="Rocket Loans" class="logo-m" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:120px; height:auto; border:0;"></a>
+              <!--<![endif]-->
+            </td>
+            <td class="dk-t2" align="right" valign="middle" style="font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:12px; line-height:16px; color:#707070;">
+              <a href="https://www.rocketloans.com/" style="color:#707070; text-decoration:underline;">View online</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- ========================================================
+         PROGRESS BAR - 6px track + 14px labels, 94% complete
+         Both cells are painted: an unpainted spacer cell would render WHITE on the
+         track in Outlook, because Word does not inherit background-color into nested
+         tables. border-collapse:separate is required or the reset kills the radius.
+         ======================================================== -->
+    <tr>
+      <td class="gutter" style="padding:24px 32px 0 32px;">
+        <table role="presentation" class="dk-track" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#F2F2F2" style="width:100%; background-color:#F2F2F2; border-radius:100px; border-collapse:separate !important;">
+          <tr>
+            <td class="bar-fill" width="94%" height="6" bgcolor="#DE3341" style="width:94%; height:6px; background-color:#DE3341; border-radius:100px 0 0 100px; font-size:1px; line-height:6px;">&nbsp;</td>
+            <td class="bar-rest dk-rest" width="6%" height="6" bgcolor="#F2F2F2" style="width:6%; height:6px; background-color:#F2F2F2; border-radius:0 100px 100px 0; font-size:1px; line-height:6px;">&nbsp;</td>
+          </tr>
+        </table>
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;">
+          <tr>
+            <td class="dk-t" align="left" valign="top" style="padding-top:12px; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:14px; line-height:16px; font-weight:500; color:#111111; mso-line-height-rule:exactly;">Start application</td>
+            <td class="dk-t" align="right" valign="top" style="padding-top:12px; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:14px; line-height:16px; font-weight:500; color:#111111; mso-line-height-rule:exactly;">Get funded</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- ========================================================
+         HERO
+         ======================================================== -->
+    <tr>
+      <td class="gutter" style="padding:24px 32px 0 32px;">
+        <p class="h-hero dk-h" style="margin:0; font-family:'WNTL Display','WNTL Text',Arial,Helvetica,sans-serif; font-size:56px; line-height:62px; font-weight:600; color:#050505; mso-line-height-rule:exactly;">You&rsquo;re in the home stretch!</p>
+      </td>
+    </tr>
+
+    <!-- ========================================================
+         BODY COPY - 16/24, two paragraphs, footnote markers 1 and 2
+         line-height:0 on the <sup> keeps the 24px rhythm from stretching
+         ======================================================== -->
+    <tr>
+      <td class="gutter dk-t" style="padding:24px 32px 0 32px; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:24px; color:#111111; mso-line-height-rule:exactly;">
+        <p style="margin:0 0 24px 0;">Choose how you&rsquo;d like to make your monthly payments, sign your offer, and see funds land in your bank account as soon as today.<sup style="font-size:10px; line-height:0;">1</sup></p>
+        <p style="margin:0;">Fun fact: 85% of Rocket Loans clients use autopay every month.<sup style="font-size:10px; line-height:0;">2</sup> It&rsquo;s simple and secure.</p>
+      </td>
+    </tr>
+
+    <!-- ========================================================
+         SOLID CTA
+         ======================================================== -->
+    <tr>
+      <td class="gutter btn-full" style="padding:24px 32px 0 32px;">
+        <!--[if mso]>
+        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://personal.rocketloans.com/apply" style="height:51px; v-text-anchor:middle; width:222px;" arcsize="50%" stroke="f" fillcolor="#DE3341">
+          <w:anchorlock/>
+          <center style="color:#FFFFFF; font-family:Arial,sans-serif; font-size:16px; font-weight:500;">Set a repayment method</center>
+        </v:roundrect>
+        <![endif]-->
+        <!--[if !mso]><!-- -->
+        <a href="https://personal.rocketloans.com/apply" style="background-color:#DE3341; border-radius:100px; color:#FFFFFF; display:inline-block; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; font-weight:500; line-height:24px; padding:13px 24px; min-width:138px; text-align:center; text-decoration:none; -webkit-text-size-adjust:none;">Set a repayment method</a>
+        <!--<![endif]-->
+      </td>
+    </tr>
+
+    <!-- ========================================================
+         INFO BAR - lightbulb + "Heads up:" note
+         The bar is a painted table with its own radius, so every cell inside it is
+         painted too (Word would otherwise render the icon cell white on the fill).
+         ======================================================== -->
+    <tr>
+      <td class="gutter" style="padding:24px 32px 0 32px;">
+        <table role="presentation" class="dk-surface" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#F7F7F7" style="width:100%; background-color:#F7F7F7; border-radius:8px; border-collapse:separate !important;">
+          <tr>
+            <td class="info-pad dk-surface" width="24" valign="top" bgcolor="#F7F7F7" style="width:24px; padding:32px 0 32px 40px; background-color:#F7F7F7;">
+              <!-- PLACEHOLDER 1/4 - lightbulb, light cut (#111 stroke), 24x24 -->
+              <img class="ico-lt" src="https://placehold.co/48x48/F7F7F7/111111/png?text=%20" width="24" height="24" alt="" style="display:block; width:24px; height:24px; border:0;">
+              <!--[if !mso]><!-- -->
+              <!-- PLACEHOLDER 2/4 - lightbulb, dark cut (white stroke), 24x24 -->
+              <img class="ico-dk" src="https://placehold.co/48x48/262626/FFFFFF/png?text=%20" width="24" height="24" alt="" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:24px; height:24px; border:0;">
+              <!--<![endif]-->
+            </td>
+            <td class="info-pad dk-surface dk-t" valign="top" bgcolor="#F7F7F7" style="padding:32px 40px 32px 16px; background-color:#F7F7F7; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:24px; color:#111111; mso-line-height-rule:exactly;">
+              <p style="margin:0;"><strong style="font-weight:600;">Heads up:</strong> When you accept a loan offer, we run a hard credit inquiry that can cause a small, temporary drop in your credit score (1&ndash;5 points).</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- DIVIDER (painted 1px cell - Word-safe) -->
+    <tr>
+      <td class="gutter" style="padding:24px 32px 0 32px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+          <tr><td class="dk-div" height="1" bgcolor="#E9E9E9" style="height:1px; font-size:1px; line-height:1px; background-color:#E9E9E9;">&nbsp;</td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- ========================================================
+         PHOTO + SUPPORT LOCKUP (image left / copy right; stacks on mobile)
+         ======================================================== -->
+    <tr>
+      <td class="gutter" style="padding:24px 32px 24px 32px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+          <tr>
+            <td class="stack pad-right" valign="middle" width="368" style="width:368px; padding-right:32px;">
+              <!-- PLACEHOLDER 3/4 - support photo, DESKTOP crop (368x177, radius 12) -->
+              <img class="hero-d" src="https://placehold.co/736x354/E9E9E9/767676/png?text=Support+photo+368x177" width="368" height="177" alt="" style="display:block; width:100%; max-width:368px; height:auto; border:0; border-radius:12px;">
+              <!-- PLACEHOLDER 4/4 - support photo, MOBILE crop (302x187, taller than desktop).
+                   Wrapped so Outlook (desktop) never shows it. -->
+              <!--[if !mso]><!-- -->
+              <img class="hero-m" src="https://placehold.co/604x374/E9E9E9/767676/png?text=Support+photo+302x187" width="302" height="187" alt="" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:100%; max-width:100%; height:auto; border:0; border-radius:12px;">
+              <!--<![endif]-->
+            </td>
+            <td class="stack" valign="middle" style="vertical-align:middle;">
+              <p class="dk-h" style="margin:0 0 16px 0; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:24px; line-height:31px; font-weight:500; color:#111111; mso-line-height-rule:exactly;">Need some support?</p>
+              <p class="dk-t" style="margin:0 0 16px 0; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:24px; color:#111111; mso-line-height-rule:exactly;">Our U.S.-based team is here to help.</p>
+              <div class="btn-full dk-ol">
+                <!-- markup matched to the shipped support bar in the other templates:
+                     Outlook gets the telephone entity rather than an image inside VML -->
+                <!--[if mso]>
+                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="tel:+18003337625" style="height:49px; v-text-anchor:middle; width:216px;" arcsize="50%" strokecolor="#767676" strokeweight="1.5px" filled="f">
+                  <w:anchorlock/>
+                  <center style="color:#111111; font-family:Arial,sans-serif; font-size:16px; font-weight:500;">&#9742;&nbsp;&nbsp;(800) 333-7625</center>
+                </v:roundrect>
+                <![endif]-->
+                <!--[if !mso]><!-- -->
+                <a href="tel:+18003337625" style="border:1.5px solid #767676; border-radius:100px; color:#111111; display:inline-block; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; font-weight:500; line-height:24px; padding:10px 32px; text-align:center; text-decoration:none; -webkit-text-size-adjust:none;"><img class="phone-ico" src="https://framerusercontent.com/images/50JFCCf4h7T6WJXWmXhSieJhbQ.png?width=54&height=48" width="20" height="20" alt="" style="display:inline-block; vertical-align:middle; border:0; margin-right:8px;">(800) 333-7625</a>
+                <!--<![endif]-->
+              </div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- ========================================================
+         FOOTER
+         ======================================================== -->
+    <tr>
+      <td class="gutter foot-pad foot-top fine dk-surface dk-t dk-link" bgcolor="#F7F7F7" style="background-color:#F7F7F7; padding:40px 32px 32px 32px; font-family:'WNTL Text Condensed','Arial Narrow',Arial,Helvetica,sans-serif; font-size:10px; line-height:15px; letter-spacing:0.2px; color:#111111; mso-line-height-rule:exactly;">
+
+        <p style="margin:0 0 15px 0; font-family:'WNTL Text Condensed','Arial Narrow',Arial,Helvetica,sans-serif; font-size:10px; line-height:15px; letter-spacing:0.2px; color:#111111;">1. Same Day Funding available for clients completing the loan process and signing the Promissory Note by 4:00PM ET on a business day. Also note, the ACH credit will be submitted to your bank the same business day. This may result in same day funding, but results may vary and your bank may have rules that limit our ability to credit your account. We are not responsible for delays which may occur due to incorrect routing number, account number, or errors of your financial institution.</p>
+
+        <p style="margin:0 0 15px 0; font-family:'WNTL Text Condensed','Arial Narrow',Arial,Helvetica,sans-serif; font-size:10px; line-height:15px; letter-spacing:0.2px; color:#111111;">2. Among loans originated since January 2021, 85% of loans started on autopay and stayed on that payment method through the original term duration of their loan.</p>
+
+        <p style="margin:0 0 15px 0; font-family:'WNTL Text Condensed','Arial Narrow',Arial,Helvetica,sans-serif; font-size:10px; line-height:15px; letter-spacing:0.2px; color:#111111;">All personal loans are made by Cross River Bank, a New Jersey state chartered commercial bank, Member FDIC, Equal Housing Lender. All loans are unsecured, fully amortizing personal loans. Eligibility for a loan is not guaranteed. This is not a deposit product. Please refer to our <a href="https://www.rocketloans.com/disclosures-and-licenses" style="color:#111111; text-decoration:underline;">Disclosures and Licenses</a> page for state-required disclosures, licenses, and lending restrictions.</p>
+
+        <p style="margin:0 0 15px 0; font-family:'WNTL Text Condensed','Arial Narrow',Arial,Helvetica,sans-serif; font-size:10px; line-height:15px; letter-spacing:0.2px; color:#111111;">Borrower must be a U.S. citizen or permanent U.S. resident alien at least 18 years of age. All loan applications are subject to credit review and approval. Offered loan terms depend upon your credit profile, requested amount, requested loan term, credit usage, credit history and other factors. Not all borrowers receive the lowest interest rate. To qualify for the lowest rate, you must have excellent credit, meet certain conditions, and select autopay. Rates and Terms are subject to change at any time without notice.</p>
+
+        <p style="margin:0 0 15px 0; font-family:'WNTL Text Condensed','Arial Narrow',Arial,Helvetica,sans-serif; font-size:10px; line-height:15px; letter-spacing:0.2px; color:#111111;">Please refer to our <a href="https://www.rocketloans.com/app#/terms-of-service" style="color:#111111; text-decoration:underline;">Terms of Use</a> and please refer to <a href="https://static.rocketloans.com/disclosures/our-privacy-notice.pdf" style="color:#111111; text-decoration:underline;">Rocket Loans&rsquo; Privacy Notice</a> and <a href="https://static.rocketloans.com/disclosures/bank-privacy-notice.pdf" style="color:#111111; text-decoration:underline;">CrossRiver&rsquo;s Privacy Notice</a> to learn more about what we do with your personal information.</p>
+
+        <p style="margin:0 0 15px 0; font-family:'WNTL Text Condensed','Arial Narrow',Arial,Helvetica,sans-serif; font-size:10px; line-height:15px; letter-spacing:0.2px; color:#111111;">Clients featured in imagery are clients of the Rocket family of companies and may not be clients of Rocket Loans.</p>
+
+        <p style="margin:0 0 15px 0; font-family:'WNTL Text Condensed','Arial Narrow',Arial,Helvetica,sans-serif; font-size:10px; line-height:15px; letter-spacing:0.2px; color:#111111;">To no longer receive emails from Rocket Loans, <a href="https://www.rocketloans.com/app?j=232859&sfmc_sub=198761599&l=18_HTML&u=2125569&mid=100017476&jb=1#/unsubscribe" style="color:#111111; text-decoration:underline;">unsubscribe here</a>.</p>
+
+        <p style="margin:0; font-family:'WNTL Text Condensed','Arial Narrow',Arial,Helvetica,sans-serif; font-size:10px; line-height:15px; letter-spacing:0.2px; color:#111111;">RockLoans Marketplace LLC dba Rocket Loans dba RocketLoans | 1050 Woodward Ave., Detroit, MI 48226</p>
+
+      </td>
+    </tr>
+
+    <!-- EHL - the badge ships with its own #F7F7F7 fill, so it stays legible on the dark surface -->
+    <tr>
+      <td class="gutter foot-pad foot-bot ehl dk-surface" bgcolor="#F7F7F7" style="background-color:#F7F7F7; padding:0 32px 40px 32px;">
+        <img src="https://framerusercontent.com/images/Je05IYQq7H9Lpu6KkOOuHfD0JRM.png?width=154&amp;height=138" width="62" height="62" alt="Equal Housing Lender" style="display:block; border:0;">
+      </td>
+    </tr>
+
+  </table>
+
+  <!--[if mso]></td></tr></table><![endif]-->
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>
