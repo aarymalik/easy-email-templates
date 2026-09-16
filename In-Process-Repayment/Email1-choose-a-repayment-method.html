@@ -9,39 +9,7 @@
 <meta name="supported-color-schemes" content="light">
 <title>Next: Choose your way to pay</title>
 
-<!--
-  In-Process Repayment (Status 400) - "Choose a repayment method".
-  Built from Figma node 45:376 (desktop frame 45:444 / mobile frame 45:377).
-    SL: Next: Choose your way to pay
-    PH: You're so close to getting your funds, %%FirstName%%.
 
-  NOTE ON THE FILE NAME: the Figma section is labelled "Email 1 - Choose a repayment method",
-  but 45:897 (already built as Email1-new-offer.html) is also labelled Email 1. This one is
-  numbered 2 because its progress bar sits further along (94% vs 72%). Rename if the journey
-  order says otherwise.
-
-  Figma measurements carried over:
-    - 24px vertical rhythm between every body block; gutters 32px desktop / 24px mobile
-    - hero 56/62 desktop -> 32/35 mobile; body 16/24; "Need some support?" 24px Medium BOTH viewports
-    - progress track 6px #F2F2F2, fill #DE3341 at 94% desktop / 88% mobile, labels 14px Medium
-    - info bar #F7F7F7 radius 8, padding 32/40 desktop -> 32/32 mobile, 24px icon + 16px gap
-    - CTA button 222x51 desktop (padding 13/24), full width mobile
-    - support image 368x177 desktop / 302x187 mobile (two different crops, swapped like other templates)
-    - footer 40px/32px padding desktop, EHL 62px -> 52px mobile
-
-  Deliberate deviations from the Figma, all following the repo's documented rules:
-    - outlined phone button uses a #767676 border, not the Figma's #111. Near-black outlines
-      turn into hard black boxes in Outlook dark mode (see README "Rendering gotchas").
-    - the divider is a painted 1px #E9E9E9 cell rather than an SVG, because Word ignores
-      border-top on a zero-height element.
-    - phone icon is rendered at 20px, not the Figma's 29px, to match the support bar shipping
-      in the other 22 templates.
-
-  ASSETS - TEMPORARY HOST. Four assets in this email are new and are not on the Rocket CDN yet.
-  They are committed at In-Process-Repayment/images/ and are served here from this repo's raw
-  GitHub URLs (branch in-process-repayment-email-2) so the email previews correctly. Re-host them on framerusercontent.com (like every
-  other asset in this repo) and swap the four src values marked "TEMP HOST" before any real send.
--->
 
 <!--[if mso]>
 <noscript><xml>
@@ -92,8 +60,7 @@
     /* progress fill is 94% on the desktop frame and 88% on the mobile frame */
     .bar-fill     { width:88% !important; }
     .bar-rest     { width:12% !important; }
-    /* the Figma mobile info bar tightens its side padding 40px -> 32px */
-    .info-pad     { padding-left:32px !important; padding-right:32px !important; }
+    .card-pad     { padding:32px !important; }
     .foot-pad     { padding-left:24px !important; padding-right:24px !important; }
     /* the Figma mobile footer tightens 40px -> 32px top and bottom */
     .foot-top     { padding-top:32px !important; }
@@ -205,19 +172,25 @@
 
     <!-- ========================================================
          INFO BAR - lightbulb + "Heads up:" note
-         The bar is a painted table with its own radius, so every cell inside it is
-         painted too (Word would otherwise render the icon cell white on the fill).
+         Same card structure as TWNFY / RMSC Login: rounded outer table, an UNPAINTED
+         full-bleed .card-pad cell, and a painted inner table for the icon and copy.
          ======================================================== -->
     <tr>
       <td class="gutter" style="padding:24px 32px 0 32px;">
-        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#F7F7F7" style="width:100%; background-color:#F7F7F7; border-radius:8px; border-collapse:separate !important;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#F7F7F7" style="background-color:#F7F7F7; border-radius:8px;">
           <tr>
-            <td class="info-pad" width="24" valign="top" bgcolor="#F7F7F7" style="width:24px; padding:32px 0 32px 40px; background-color:#F7F7F7;">
-              <!-- PLACEHOLDER 1/3 - lightbulb, 24x24, #111 stroke -->
-              <img src="https://placehold.co/48x48/F7F7F7/111111/png?text=%20" width="24" height="24" alt="" style="display:block; width:24px; height:24px; border:0;">
-            </td>
-            <td class="info-pad" valign="top" bgcolor="#F7F7F7" style="padding:32px 40px 32px 16px; background-color:#F7F7F7; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:24px; color:#111111; mso-line-height-rule:exactly;">
-              <p style="margin:0;"><strong style="font-weight:600;">Heads up:</strong> When you accept a loan offer, we run a hard credit inquiry that can cause a small, temporary drop in your credit score (1&ndash;5 points).</p>
+            <!-- full-bleed cell: NO background here or the 8px radius is painted over -->
+            <td class="card-pad" style="padding:32px 40px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#F7F7F7" style="background-color:#F7F7F7;">
+                <tr>
+                  <td valign="top" width="32" bgcolor="#F7F7F7" style="width:32px; background-color:#F7F7F7; padding-right:16px;">
+                    <img src="https://framerusercontent.com/images/CH9xrzD678gtQPCezH5s4LIM.png?width=60&height=60" width="32" height="32" alt="" style="display:block; border:0; width:32px; height:32px;">
+                  </td>
+                  <td valign="top" bgcolor="#F7F7F7" style="background-color:#F7F7F7; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:24px; color:#111111; mso-line-height-rule:exactly;">
+                    <p style="margin:0;"><strong style="font-weight:600;">Heads up:</strong> When you accept a loan offer, we run a hard credit inquiry that can cause a small, temporary drop in your credit score (1&ndash;5 points).</p>
+                  </td>
+                </tr>
+              </table>
             </td>
           </tr>
         </table>
@@ -241,12 +214,12 @@
         <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
           <tr>
             <td class="stack pad-right" valign="middle" width="368" style="width:368px; padding-right:32px;">
-              <!-- PLACEHOLDER 2/3 - support photo, DESKTOP crop (368x177, radius 12) -->
-              <img class="hero-d" src="https://placehold.co/736x354/E9E9E9/767676/png?text=Support+photo+368x177" width="368" height="177" alt="" style="display:block; width:100%; max-width:368px; height:auto; border:0; border-radius:12px;">
-              <!-- PLACEHOLDER 3/3 - support photo, MOBILE crop (302x187, taller than desktop).
+              <!-- support photo - DESKTOP crop (368x177, radius 12) -->
+              <img class="hero-d" src="https://framerusercontent.com/images/qKnhlFTiNvMl42zTw36VbBIiWx4.png" width="368" height="177" alt="" style="display:block; width:100%; max-width:368px; height:auto; border:0; border-radius:12px;">
+              <!-- support photo - MOBILE crop (302x187, taller than desktop).
                    Wrapped so Outlook (desktop) never shows it. -->
               <!--[if !mso]><!-- -->
-              <img class="hero-m" src="https://placehold.co/604x374/E9E9E9/767676/png?text=Support+photo+302x187" width="302" height="187" alt="" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:100%; max-width:100%; height:auto; border:0; border-radius:12px;">
+              <img class="hero-m" src="https://framerusercontent.com/images/3jSRHuiL1bDnMvaW1P47YctpI.png" width="302" height="187" alt="" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:100%; max-width:100%; height:auto; border:0; border-radius:12px;">
               <!--<![endif]-->
             </td>
             <td class="stack" valign="middle" style="vertical-align:middle;">

@@ -88,11 +88,6 @@ a whole folder at once.
 
 ## Open items
 
-- `In-Process-Repayment/Email1-choose-a-repayment-method.html` carries three `placehold.co`
-  stand-ins, marked `PLACEHOLDER` in the file: the support photo (desktop and mobile crops) and
-  the lightbulb icon. No existing template uses these images. Swap the three `src` values once the
-  assets are hosted.
-
 - Eight files still carry `scale-down-to=512` on a hero or feature image, which caps the asset
   below its display width. Affected: both `RMSC Refi Paid Off` cuts, `Home Purchase Email 3`,
   `Refinance Email 3` and `4`, `TWNFY 2`, and both `Status 900-Switch to autopay` cuts.
