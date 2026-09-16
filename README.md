@@ -15,6 +15,7 @@ paste it into an SFMC content block and it renders. There is no build step and n
 | `TWNFY Doc Requests/` | 3 | Document-request emails 1–2, plus a modules file of 27 tracking-item cards |
 | `RLLD Create Acct/` | 2 | In-process account creation |
 | `RMSC Login/` | 2 | Offer pairing and login reminder |
+| `In-Process-Repayment/` | 3 | Status 400 in-process repayment - offer update, APR change, choosing a repayment method |
 | `gmail-safe-images/` | 3 | PNGs re-encoded for Gmail, which rejects some source assets |
 
 `TWNFY tracking item modules.html` is not a sendable email. It is a library of 27 standalone card
