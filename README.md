@@ -39,11 +39,6 @@ These hold across every file in the repo. Match them in anything new.
 - **Personalization** — SFMC substitution strings, e.g. `%%emailAddress%%`.
 - **Images** — hosted absolutely (mostly `framerusercontent.com`). Every `<img>` carries explicit
   `width`, `height`, `border:0` and `display:block`. Nothing is referenced relatively.
-- **Dark mode** — only `In-Process-Repayment/Email1-choose-a-repayment-method.html` has it so far.
-  It declares `color-scheme: light dark`, keeps every light value inline, and overrides them
-  through `.dk-*` classes in a `prefers-color-scheme: dark` block that is repeated under
-  `[data-ogsc]` for Outlook.com. Outlook 2016-2021 supports neither and stays light, which is
-  why the light design must never depend on the dark block. Every other file is light-only.
 
 ## Rendering gotchas
 
@@ -93,10 +88,10 @@ a whole folder at once.
 
 ## Open items
 
-- `In-Process-Repayment/Email1-choose-a-repayment-method.html` carries four `placehold.co`
+- `In-Process-Repayment/Email1-choose-a-repayment-method.html` carries three `placehold.co`
   stand-ins, marked `PLACEHOLDER` in the file: the support photo (desktop and mobile crops) and
-  the lightbulb icon (light and dark cuts). No existing template uses these images. Swap the four
-  `src` values once the assets are hosted.
+  the lightbulb icon. No existing template uses these images. Swap the three `src` values once the
+  assets are hosted.
 
 - Eight files still carry `scale-down-to=512` on a hero or feature image, which caps the asset
   below its display width. Affected: both `RMSC Refi Paid Off` cuts, `Home Purchase Email 3`,
