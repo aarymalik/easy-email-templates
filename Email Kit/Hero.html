@@ -9,47 +9,6 @@
 <meta name="supported-color-schemes" content="light">
 <title>Rocket Email System &mdash; Hero</title>
 
-<!--
-  HERO component, built from Figma node 2310:2921 (Rocket Loans Email Kit).
-
-  5 variants, each delimited by VARIANT comments:
-    01  Photo          - headline, subtitle + button, photo
-    02  Video - red    - same, with a video still; run time pill in red
-    03  Video - white  - same, with a video still; run time pill in white
-    04  Text only      - headline, subtitle + button
-    05  Headline only  - headline, then button beneath it
-
-  Any of the three parts can be dropped: 04 is 01 without the image, 05 is 04
-  without the subtitle. Drop the button by deleting its cell and the subtitle
-  takes the full width.
-
-  MOBILE: the same markup. The headline and subtitle step down, the subtitle and
-  button stack (.stack), the button goes full width (.btn-full) and the artwork
-  swaps to its own crop (.hero-d / .hero-m), which is how every email in this
-  repo handles it.
-
-  Figma measurements carried over:
-    - headline 56/62 DemiBold #050505, 16px to the subtitle row
-    - subtitle 24/26 Medium in a 548 column, 66px gap, button column 138
-    - 32px from the subtitle row to the artwork; artwork 752x259, radius 8
-    - mobile: headline 32/35, 10px gap, subtitle 20/22, 32px to the button,
-      32px to the artwork, artwork 302x259
-
-  VIDEO - FLAG TO CLIENT: email cannot play video for most of the list. HTML5
-  <video> runs in Apple Mail and Samsung Mail only; Gmail strips it and Outlook
-  never supported it, so roughly three quarters of opens would see nothing. Both
-  video variants therefore ship the same way every production email does: a still
-  that links out to the video, which also gives the click something to track.
-  The play button and the run time pill are baked into that still - an overlay
-  positioned on top of an image does not survive Outlook or Gmail either - so the
-  artwork is one flat image cropped from the Figma frame including both overlays.
-  If the client wants motion in the two clients that support it, a <video> tag
-  with the still as its fallback content degrades cleanly and can be added.
-
-  IMAGES: the photo hero is hosted. The four video stills are still placeholders -
-  swap each src for its hosted URL; sizes are marked on each one.
--->
-
 <!--[if mso]>
 <noscript><xml>
   <o:OfficeDocumentSettings>

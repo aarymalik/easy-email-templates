@@ -9,40 +9,6 @@
 <meta name="supported-color-schemes" content="light">
 <title>Rocket Email System &mdash; CTA blocks</title>
 
-<!--
-  CTA BLOCKS component, built from Figma node 2310:3702 (Rocket Loans Email Kit).
-
-  11 variants across four families, each delimited by VARIANT comments:
-    01-03  Basic bar     - 28px headline + button           (Red / Grey / Putty)
-    04-06  Detailed bar  - headline + body + credit line    (Red / Grey / Putty)
-    07-08  Offer bar     - tag line, divider, body, button  (tag top / tag bottom, red only)
-    09-11  Secondary msg - 32px icon + title + body         (Grey / Putty / Olive #F0EED9)
-
-  MOBILE: the same markup stacks - no separate mobile blocks. Columns drop to full width,
-  the button goes full width, and in the Detailed bars the credit line moves below the
-  button, which is where the Figma's mobile frames put it.
-
-  Figma measurements carried over:
-    - bars are 752 wide in the 800px shell, radius 8
-    - Basic 20/40 padding, Detailed and Secondary 32/40, Offer 25/20; all 32px on mobile
-      except Basic, which is 20px top/bottom
-    - headline 28px DemiBold, body 16/24, offer and secondary titles 16/21 DemiBold,
-      credit line 12/16
-    - copy column 477 wide (409 in Secondary, after the 32px icon), 40px gap to the button
-    - Offer bars pin the copy column at 534 + 40 gap and the button column at 138, the
-      widths Figma uses there, so the body text sets on two lines and not three
-
-  Deviation from the Figma, following the repo's documented rules:
-    - outlined buttons on light backgrounds use a #767676 border, not the Figma's #111.
-      Near-black outlines turn into hard black boxes in Outlook dark mode (see README).
-      Buttons on red keep the Figma's white border.
-
-  ICONS: hosted, one per background so each carries its own opaque fill - a transparent
-  icon would blend into the client's dark-mode background. Tag icons are 32px on red and
-  40px on the light bars; the dark check is 16px. The white check on red is the 12px icon
-  already used across the Nurture emails. Every button points at "#".
--->
-
 <!--[if mso]>
 <noscript><xml>
   <o:OfficeDocumentSettings>
@@ -90,6 +56,11 @@
     .d-only       { display:none !important; max-height:0 !important; overflow:hidden !important; mso-hide:all !important; }
     .m-only       { display:block !important; max-height:none !important; overflow:visible !important; padding-top:20px !important; }
     .pad-right    { padding-right:0 !important; }
+    /* the Figma mobile frames open these gaps up: Detailed headline 8 -> 20,
+       Secondary title 4 -> 8, Offer divider 15 -> 20 above and below */
+    .gap-det      { margin-bottom:20px !important; }
+    .gap-sec      { margin-bottom:8px !important; }
+    .gap-offer    { padding:20px 0 !important; }
   }
 </style>
 </head>
@@ -110,7 +81,7 @@
         <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#DE3341" style="background-color:#DE3341; border-radius:8px;">
           <tr>
             <!-- full-bleed cell: NO background here or the 8px radius is painted over -->
-            <td class="cta-pad pad-basic" style="padding:20px 40px;">
+            <td class="cta-pad pad-basic" style="padding:32px 40px;">
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#DE3341" style="background-color:#DE3341;">
                 <tr>
                   <td class="stack pad-right" valign="middle" width="477" bgcolor="#DE3341" style="width:477px; background-color:#DE3341; padding-right:40px; font-family:'WNTL Display','WNTL Text',Arial,Helvetica,sans-serif; font-size:28px; line-height:31px; font-weight:600; color:#FFFFFF; mso-line-height-rule:exactly;">Call to action goes here</td>
@@ -142,7 +113,7 @@
         <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#F7F7F7" style="background-color:#F7F7F7; border-radius:8px;">
           <tr>
             <!-- full-bleed cell: NO background here or the 8px radius is painted over -->
-            <td class="cta-pad pad-basic" style="padding:20px 40px;">
+            <td class="cta-pad pad-basic" style="padding:32px 40px;">
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#F7F7F7" style="background-color:#F7F7F7;">
                 <tr>
                   <td class="stack pad-right" valign="middle" width="477" bgcolor="#F7F7F7" style="width:477px; background-color:#F7F7F7; padding-right:40px; font-family:'WNTL Display','WNTL Text',Arial,Helvetica,sans-serif; font-size:28px; line-height:31px; font-weight:600; color:#111111; mso-line-height-rule:exactly;">Call to action goes here</td>
@@ -174,7 +145,7 @@
         <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#F3EEE7" style="background-color:#F3EEE7; border-radius:8px;">
           <tr>
             <!-- full-bleed cell: NO background here or the 8px radius is painted over -->
-            <td class="cta-pad pad-basic" style="padding:20px 40px;">
+            <td class="cta-pad pad-basic" style="padding:32px 40px;">
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#F3EEE7" style="background-color:#F3EEE7;">
                 <tr>
                   <td class="stack pad-right" valign="middle" width="477" bgcolor="#F3EEE7" style="width:477px; background-color:#F3EEE7; padding-right:40px; font-family:'WNTL Display','WNTL Text',Arial,Helvetica,sans-serif; font-size:28px; line-height:31px; font-weight:600; color:#111111; mso-line-height-rule:exactly;">Call to action goes here</td>
@@ -210,7 +181,7 @@
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#DE3341" style="background-color:#DE3341;">
                 <tr>
                   <td class="stack pad-right" valign="middle" width="477" bgcolor="#DE3341" style="width:477px; background-color:#DE3341;">
-                    <p style="margin:0 0 8px 0; font-family:'WNTL Display','WNTL Text',Arial,Helvetica,sans-serif; font-size:28px; line-height:31px; font-weight:600; color:#FFFFFF; mso-line-height-rule:exactly;">Call to action goes here</p>
+                    <p class="gap-det" style="margin:0 0 8px 0; font-family:'WNTL Display','WNTL Text',Arial,Helvetica,sans-serif; font-size:28px; line-height:31px; font-weight:600; color:#FFFFFF; mso-line-height-rule:exactly;">Call to action goes here</p>
                     <p style="margin:0; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:24px; color:#FFFFFF; mso-line-height-rule:exactly;">Lorem ipsum dolor sit amet. Eum doloribus impedit ex earum laboriosam nam voluptas recusandae et dolore voluptatibus id aspernatur iusto.</p>
                     <!-- credit line sits under the copy on desktop -->
                     <div class="d-only" style="padding-top:16px;">
@@ -271,7 +242,7 @@
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#F7F7F7" style="background-color:#F7F7F7;">
                 <tr>
                   <td class="stack pad-right" valign="middle" width="477" bgcolor="#F7F7F7" style="width:477px; background-color:#F7F7F7;">
-                    <p style="margin:0 0 8px 0; font-family:'WNTL Display','WNTL Text',Arial,Helvetica,sans-serif; font-size:28px; line-height:31px; font-weight:600; color:#111111; mso-line-height-rule:exactly;">Call to action goes here</p>
+                    <p class="gap-det" style="margin:0 0 8px 0; font-family:'WNTL Display','WNTL Text',Arial,Helvetica,sans-serif; font-size:28px; line-height:31px; font-weight:600; color:#111111; mso-line-height-rule:exactly;">Call to action goes here</p>
                     <p style="margin:0; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:24px; color:#111111; mso-line-height-rule:exactly;">Lorem ipsum dolor sit amet. Eum doloribus impedit ex earum laboriosam nam voluptas recusandae et dolore voluptatibus id aspernatur iusto.</p>
                     <!-- credit line sits under the copy on desktop -->
                     <div class="d-only" style="padding-top:16px;">
@@ -332,7 +303,7 @@
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#F3EEE7" style="background-color:#F3EEE7;">
                 <tr>
                   <td class="stack pad-right" valign="middle" width="477" bgcolor="#F3EEE7" style="width:477px; background-color:#F3EEE7;">
-                    <p style="margin:0 0 8px 0; font-family:'WNTL Display','WNTL Text',Arial,Helvetica,sans-serif; font-size:28px; line-height:31px; font-weight:600; color:#111111; mso-line-height-rule:exactly;">Call to action goes here</p>
+                    <p class="gap-det" style="margin:0 0 8px 0; font-family:'WNTL Display','WNTL Text',Arial,Helvetica,sans-serif; font-size:28px; line-height:31px; font-weight:600; color:#111111; mso-line-height-rule:exactly;">Call to action goes here</p>
                     <p style="margin:0; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:24px; color:#111111; mso-line-height-rule:exactly;">Lorem ipsum dolor sit amet. Eum doloribus impedit ex earum laboriosam nam voluptas recusandae et dolore voluptatibus id aspernatur iusto.</p>
                     <!-- credit line sits under the copy on desktop -->
                     <div class="d-only" style="padding-top:16px;">
@@ -402,7 +373,7 @@
                         <td valign="middle" bgcolor="#DE3341" style="background-color:#DE3341; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:21px; font-weight:600; color:#FFFFFF; mso-line-height-rule:exactly;">2.7% um doloribus impedit ex earum laboriosam.</td>
                       </tr>
                     </table>
-                    <div style="padding:15px 0;">
+                    <div class="gap-offer" style="padding:15px 0;">
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#DE3341" style="background-color:#DE3341;">
                       <tr><td height="1" bgcolor="#E8707A" style="height:1px; font-size:1px; line-height:1px; background-color:#E8707A;">&nbsp;</td></tr>
                     </table>
@@ -442,7 +413,7 @@
                 <tr>
                   <td class="stack pad-right" valign="middle" width="574" bgcolor="#DE3341" style="width:574px; background-color:#DE3341; padding-right:40px;">
                     <p style="margin:0; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:24px; color:#FFFFFF; mso-line-height-rule:exactly;">Lorem ipsum dolor sit amet. Eum doloribus impedit ex earum laboriosam nam voluptas recusandae et dolore voluptatibus id aspernatur iusto.</p>
-                    <div style="padding:15px 0;">
+                    <div class="gap-offer" style="padding:15px 0;">
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#DE3341" style="background-color:#DE3341;">
                       <tr><td height="1" bgcolor="#E8707A" style="height:1px; font-size:1px; line-height:1px; background-color:#E8707A;">&nbsp;</td></tr>
                     </table>
@@ -493,7 +464,7 @@
                     <img src="https://framerusercontent.com/images/rN7TW5yDv8fozVtJgl9JtrUkMmk.png?width=80&height=80" width="40" height="40" alt="" style="display:block; border:0; width:40px; height:40px;">
                   </td>
                   <td class="stack pad-right" valign="middle" width="409" bgcolor="#F7F7F7" style="width:409px; background-color:#F7F7F7; padding-right:40px;">
-                    <p style="margin:0 0 4px 0; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:21px; font-weight:600; color:#111111; mso-line-height-rule:exactly;">Title goes here</p>
+                    <p class="gap-sec" style="margin:0 0 4px 0; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:21px; font-weight:600; color:#111111; mso-line-height-rule:exactly;">Title goes here</p>
                     <p style="margin:0; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:24px; color:#111111; mso-line-height-rule:exactly;">Lorem ipsum dolor sit amet. Eum doloribus impedit ex earum laboriosam nam voluptas recusandae et dolore voluptatibus id aspernatur iusto.</p>
                   </td>
                   <td class="stack btn-cell" valign="middle" align="right" width="155" bgcolor="#F7F7F7" style="width:155px; background-color:#F7F7F7; white-space:nowrap;">
@@ -532,7 +503,7 @@
                     <img src="https://framerusercontent.com/images/IBfs3olcyswxVsAf0z460r8Wihc.png?width=80&height=80" width="40" height="40" alt="" style="display:block; border:0; width:40px; height:40px;">
                   </td>
                   <td class="stack pad-right" valign="middle" width="409" bgcolor="#F3EEE7" style="width:409px; background-color:#F3EEE7; padding-right:40px;">
-                    <p style="margin:0 0 4px 0; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:21px; font-weight:600; color:#111111; mso-line-height-rule:exactly;">Title goes here</p>
+                    <p class="gap-sec" style="margin:0 0 4px 0; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:21px; font-weight:600; color:#111111; mso-line-height-rule:exactly;">Title goes here</p>
                     <p style="margin:0; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:24px; color:#111111; mso-line-height-rule:exactly;">Lorem ipsum dolor sit amet. Eum doloribus impedit ex earum laboriosam nam voluptas recusandae et dolore voluptatibus id aspernatur iusto.</p>
                   </td>
                   <td class="stack btn-cell" valign="middle" align="right" width="155" bgcolor="#F3EEE7" style="width:155px; background-color:#F3EEE7; white-space:nowrap;">
@@ -571,7 +542,7 @@
                     <img src="https://framerusercontent.com/images/SIbaFExhW4jwtpY8tHXmASGahSU.png?width=80&height=80" width="40" height="40" alt="" style="display:block; border:0; width:40px; height:40px;">
                   </td>
                   <td class="stack pad-right" valign="middle" width="409" bgcolor="#F0EED9" style="width:409px; background-color:#F0EED9; padding-right:40px;">
-                    <p style="margin:0 0 4px 0; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:21px; font-weight:600; color:#111111; mso-line-height-rule:exactly;">Title goes here</p>
+                    <p class="gap-sec" style="margin:0 0 4px 0; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:21px; font-weight:600; color:#111111; mso-line-height-rule:exactly;">Title goes here</p>
                     <p style="margin:0; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:24px; color:#111111; mso-line-height-rule:exactly;">Lorem ipsum dolor sit amet. Eum doloribus impedit ex earum laboriosam nam voluptas recusandae et dolore voluptatibus id aspernatur iusto.</p>
                   </td>
                   <td class="stack btn-cell" valign="middle" align="right" width="155" bgcolor="#F0EED9" style="width:155px; background-color:#F0EED9; white-space:nowrap;">
