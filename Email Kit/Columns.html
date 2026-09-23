@@ -9,39 +9,6 @@
 <meta name="supported-color-schemes" content="light">
 <title>Rocket Email System &mdash; Columns</title>
 
-<!--
-  COLUMNS component, built from Figma node 8258:1836 (Rocket Loans Email Kit).
-
-  13 desktop variants: each side of the row is Copy (no fill), Putty (#F3EEE7),
-  Grey (#F7F7F7) or Photo. Columns are 360 + 32 gap + 360 = 752 inside the 800px shell.
-
-  MOBILE: the same markup stacks - no separate mobile blocks. The .stack class drops each
-  column to full width and the 32px gap becomes a 20px spacer, which reproduces the six
-  mobile variants in the Figma: the column order in the markup decides whether the photo
-  sits above or below the copy (Photo | Copy -> photo on top, Copy | Photo -> photo below).
-
-  Figma measurements carried over:
-    - headline 24px DemiBold, 10px gap, body 16/24, 32px gap, button
-    - box padding 20px desktop -> 32px top/bottom, 20px sides on mobile
-    - a Copy column has 20px top/bottom padding beside a filled Putty/Grey box, and NONE
-      beside a Photo, so the column matches the photo's height and the button lines up with
-      the bottom of the image. No padding on mobile either way.
-    - cards and photos use radius 8
-    - a filled box is width 320 + 20px padding = the Figma's 360 column. Table cells add
-      padding to the stated width, so width="360" plus padding would make it 400 and
-      squeeze the neighbouring column.
-    - photo columns match the Figma exactly: 360x239 beside a Copy column, 360x279 beside a
-      filled Putty/Grey box (the box is 40px taller because of its 20px padding), and
-      302x214 on mobile
-
-  Deviation from the Figma, following the repo's documented rules:
-    - outlined buttons use a #767676 border, not the Figma's #111. Near-black outlines turn
-      into hard black boxes in Outlook dark mode (see README "Rendering gotchas").
-
-  IMAGES: hosted, one crop per slot - 360x239 and 360x279 on desktop, 302x214 on mobile.
-  Every button points at "#" - set the real link per email.
--->
-
 <!--[if mso]>
 <noscript><xml>
   <o:OfficeDocumentSettings>
