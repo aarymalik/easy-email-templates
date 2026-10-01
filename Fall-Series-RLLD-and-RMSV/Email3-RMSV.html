@@ -7,44 +7,33 @@
 <meta name="x-apple-disable-message-reformatting">
 <meta name="color-scheme" content="light">
 <meta name="supported-color-schemes" content="light">
-<title>Fall in love with predictable payments</title>
+<title>Fall home refresh? We can help.</title>
 
 <!--
-  Fall Financial Rhythm (RLLD) - Email 1.
-  Built from Figma file lXxzVtnxgYS7Bm0ICCr1l0, node 274:2269
-  (desktop frame 274:2270 / mobile frame 274:2305).
-    SL: Fall in love with predictable payments
-    PH: A simple way to know what's coming each month.
+  Fall Financial Rhythm (RMSV) - Email 3 (social proof).
+  Built from Figma file lXxzVtnxgYS7Bm0ICCr1l0, node 274:2351
+  (desktop frame 274:2352 / mobile frame 274:2365).
+    SL: Fall home refresh? We can help.
+    PH: Invest in your space for the cozy months ahead.
 
   Figma measurements carried over:
-    - 24px rhythm between sections; body gutters 24px BOTH viewports (not 32px like the
-      In-Process emails); header and mobile footer use 20px
-    - hero 56/62 desktop -> 32/35 mobile; subtitle 24/26 Medium -> 20/22; body 16/24
-    - hero: on desktop the subtitle and the red CTA sit on ONE row (subtitle left, 207px
-      button right); on mobile they stack and the button goes full width
+    - 24px rhythm between sections; body gutters 24px both viewports; header 20px
+    - hero 56/62 desktop (2 lines) -> 32/35 mobile; subtitle 24/26 Medium -> 20/22,
+      and the subtitle carries footnote 1
+    - hero: desktop puts the subtitle and the 139px red CTA on ONE row; mobile stacks
+      them and the button goes full width
     - hero image 752x259 desktop / 302x259 mobile, radius 8
-    - CTA bar #DE3341 radius 8: desktop is one row (copy left, outlined button right,
-      40px gap, 32px/40px padding); mobile stacks to title / body / full-width button /
-      credit-score tag with 20px gaps
-    - lockup: 236x171 image + 24px gap + 492px #F7F7F7 card (radius 12, padding 25/40)
-      -> stacks on mobile to a 303x190 image above a 303px card (padding 32, gap 24)
-    - footer #F7F7F7: 40px/32px padding desktop -> 32px/20px mobile; EHL 62px
-    - totals check out: 1238px before the desktop footer, 1887px before the mobile footer
+    - body is copy + a red CTA button, 32px apart; no CTA bar and no lockup in this email
+    - footer carries footnote 1 (Same Day Funding) first
+    - totals check out: 895px before the desktop footer, 1009px before the mobile footer
 
-  Deliberate deviations from the Figma, following the repo's documented rules:
-    - the CTA bar's outlined button keeps a #DE3341 background behind the white border so
-      Gmail dark mode does not re-tint it toward grey (same trick as the Nurture red CTAs).
-    - the last body paragraph follows the DESKTOP frame, which runs "Explore your newest
-      offers..." and "A lot can change..." together. The mobile frame splits them into two
-      paragraphs; splitting would add 24px on desktop, so one viewport had to differ.
+  RMSV variant of Email 3. Differences from the RLLD cut: a grey "Clients like you save
+  even more" CTA bar is ADDED before the footer (the RLLD cut has no CTA bar at all), with
+  a "Check my rate" button, and footnote 2 is added. Its outlined button keeps the repo's
+  #767676 border on an explicit fill rather than the Figma's #111.
 
-  PLACEHOLDERS: this email needs FOUR new images that are not in this repo yet. Each src
-  below is marked PLACEHOLDER IMAGE - swap all four for hosted assets:
-      1. hero, desktop crop   752x259
-      2. hero, mobile crop    302x259
-      3. lockup, desktop crop 236x171
-      4. lockup, mobile crop  303x190
-  Everything else (logo, EHL badge, white check icon) uses assets already shipping here.
+  All images are hosted: hero 752x259 desktop / 302x259 mobile, plus the logo and EHL badge
+  already shipping here.
 -->
 
 <!--[if mso]>
@@ -88,16 +77,14 @@
     .btn-full a   { display:block !important; width:auto !important; text-align:center !important; }
     /* mobile type comes from the Figma MOBILE frame */
     .h-hero       { font-size:32px !important; line-height:35px !important; }
-    .sub-hero     { font-size:20px !important; line-height:22px !important; padding-bottom:32px !important; }
+    .sub-hero     { font-size:20px !important; line-height:22px !important; width:100% !important; padding-right:0 !important; padding-bottom:32px !important; }
     .h-cta        { font-size:28px !important; line-height:31px !important; }
+    .cta-pad      { padding:32px !important; }
+    .pad-right    { padding-right:0 !important; padding-bottom:20px !important; }
     .logo-d       { display:none !important; max-height:0 !important; overflow:hidden !important; }
     .logo-m       { display:block !important; max-height:none !important; overflow:visible !important; }
     .hero-d       { display:none !important; max-height:0 !important; overflow:hidden !important; }
     .hero-m       { display:block !important; max-height:none !important; overflow:visible !important; width:100% !important; height:auto !important; }
-    .cta-pad      { padding:32px !important; }
-    .card-pad     { padding:32px !important; }
-    .card-gap     { padding-bottom:24px !important; }
-    .pad-right    { padding-right:0 !important; padding-bottom:24px !important; }
     .foot-pad     { padding-left:20px !important; padding-right:20px !important; }
     .foot-top     { padding-top:32px !important; }
     .foot-bot     { padding-bottom:32px !important; }
@@ -110,7 +97,7 @@
 
 <!-- PREHEADER -->
 <div style="display:none; font-size:1px; line-height:1px; max-height:0; max-width:0; opacity:0; overflow:hidden; mso-hide:all; font-family:Arial,sans-serif; color:#FFFFFF !important;background-color: none !important;">
-  A simple way to know what&rsquo;s coming each month.
+  Invest in your space for the cozy months ahead.
   &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847;
 </div>
 
@@ -150,19 +137,19 @@
          ======================================================== -->
     <tr>
       <td class="gutter" style="padding:24px 24px 0 24px;">
-        <p class="h-hero" style="margin:0 0 16px 0; font-family:'WNTL Display','WNTL Text',Arial,Helvetica,sans-serif; font-size:56px; line-height:62px; font-weight:600; color:#050505; mso-line-height-rule:exactly;">Know exactly what you&rsquo;re paying, every month</p>
+        <p class="h-hero" style="margin:0 0 16px 0; font-family:'WNTL Display','WNTL Text',Arial,Helvetica,sans-serif; font-size:56px; line-height:62px; font-weight:600; color:#050505; mso-line-height-rule:exactly;">Fall in love with your home again</p>
         <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
           <tr>
-            <td class="stack sub-hero" valign="middle" style="padding-right:16px; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:24px; line-height:26px; font-weight:500; color:#050505; mso-line-height-rule:exactly;">Less financial stress, more breathing room.</td>
-            <td class="stack btn-full" valign="middle" align="right" width="207" style="width:207px; white-space:nowrap;">
+            <td class="stack sub-hero" valign="middle" width="548" style="width:548px; padding-right:65px; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:24px; line-height:26px; font-weight:500; color:#050505; mso-line-height-rule:exactly;">Fund a refresh as soon as today.<sup style="font-size:15px;">1</sup></td>
+            <td class="stack btn-full" valign="middle" align="right" width="139" style="width:139px; white-space:nowrap;">
               <!--[if mso]>
-              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://personal.rocketloans.com/apply" style="height:51px; v-text-anchor:middle; width:207px;" arcsize="50%" stroke="f" fillcolor="#DE3341">
+              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://personal.rocketloans.com/apply" style="height:51px; v-text-anchor:middle; width:139px;" arcsize="50%" stroke="f" fillcolor="#DE3341">
                 <w:anchorlock/>
-                <center style="color:#FFFFFF; font-family:Arial,sans-serif; font-size:16px; font-weight:500;">Explore offers risk-free</center>
+                <center style="color:#FFFFFF; font-family:Arial,sans-serif; font-size:16px; font-weight:500;">See my offers</center>
               </v:roundrect>
               <![endif]-->
               <!--[if !mso]><!-- -->
-              <a href="https://personal.rocketloans.com/apply" style="background-color:#DE3341; border-radius:100px; color:#FFFFFF; display:inline-block; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; font-weight:500; line-height:24px; padding:13px 24px; min-width:159px; text-align:center; text-decoration:none; -webkit-text-size-adjust:none;">Explore offers risk-free</a>
+              <a href="https://personal.rocketloans.com/apply" style="background-color:#DE3341; border-radius:100px; color:#FFFFFF; display:inline-block; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; font-weight:500; line-height:24px; padding:13px 24px; min-width:91px; text-align:center; text-decoration:none; -webkit-text-size-adjust:none;">See my offers</a>
               <!--<![endif]-->
             </td>
           </tr>
@@ -173,106 +160,89 @@
     <!-- HERO IMAGE - radius 8 -->
     <tr>
       <td class="gutter" style="padding:32px 24px 0 24px;">
-        <!-- PLACEHOLDER IMAGE - HERO, DESKTOP crop (752x259). Replace this src. -->
-        <img class="hero-d" src="https://framerusercontent.com/images/Fa8Hh3I7Rfod7Pyad0P2e06rvo.png?width=752&height=259" width="752" height="259" alt="" style="display:block; width:100%; max-width:752px; height:auto; border:0; border-radius:8px;">
-        <!-- PLACEHOLDER IMAGE - HERO, MOBILE crop (302x259, a tighter crop). Replace this src.
+        <!-- HERO, DESKTOP crop (752x259) - hosted asset -->
+        <img class="hero-d" src="https://framerusercontent.com/images/PGSOGuIPJ8vyr5tKYR1hFUCaaco.png?width=2256&height=777" width="752" height="259" alt="" style="display:block; width:100%; max-width:752px; height:auto; border:0; border-radius:8px;">
+        <!-- HERO, MOBILE crop (302x259, a tighter crop) - hosted asset.
              Wrapped so Outlook (desktop) never shows it. -->
         <!--[if !mso]><!-- -->
-        <img class="hero-m" src="https://framerusercontent.com/images/pjnTkt53Xf8fojvhOcurvkmwOk.png?width=302&height=259" width="302" height="259" alt="" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:100%; max-width:100%; height:auto; border:0; border-radius:8px;">
+        <img class="hero-m" src="https://framerusercontent.com/images/GhWNn4a4AZ2Wh3RNno7Ie9A.png?width=906&height=777" width="302" height="259" alt="" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:100%; max-width:100%; height:auto; border:0; border-radius:8px;">
         <!--<![endif]-->
       </td>
     </tr>
 
     <!-- ========================================================
-         BODY COPY - 16/24
+         BODY COPY - 16/24, footnote 1 = Same Day Funding
          ======================================================== -->
     <tr>
       <td class="gutter" style="padding:24px 24px 0 24px; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:24px; color:#111111; mso-line-height-rule:exactly;">
         <p style="margin:0 0 24px 0;">{FNAME},</p>
-        <p style="margin:0 0 24px 0;">Fall is a season of change &ndash; and a great time to take a fresh look at your finances.</p>
-        <p style="margin:0 0 24px 0;">A personal loan gives you something a credit card can&rsquo;t: one fixed monthly payment and a fixed rate that won&rsquo;t change once your loan closes.</p>
-        <p style="margin:0;">Explore your newest offers in 1-2 minutes with no impact to your credit score. A lot can change since the last time you checked &ndash; it might be worth another look.</p>
+        <p style="margin:0 0 24px 0;">Fall is for making your home feel like home &ndash; new floors, kitchen updates, bathroom renovation, new roof, finishing the basement, or that project you&rsquo;ve been putting off.</p>
+        <p style="margin:0;">No matter what&rsquo;s on your list of home projects, a personal loan could unlock <strong style="font-weight:700;">$2,000 &ndash; $75,000</strong> to fund almost anything without tapping your home&rsquo;s equity.</p>
+      </td>
+    </tr>
+
+    <!-- SOLID CTA -->
+    <tr>
+      <td class="gutter btn-full" style="padding:32px 24px 0 24px;">
+        <!--[if mso]>
+        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://personal.rocketloans.com/apply" style="height:51px; v-text-anchor:middle; width:139px;" arcsize="50%" stroke="f" fillcolor="#DE3341">
+          <w:anchorlock/>
+          <center style="color:#FFFFFF; font-family:Arial,sans-serif; font-size:16px; font-weight:500;">See my offers</center>
+        </v:roundrect>
+        <![endif]-->
+        <!--[if !mso]><!-- -->
+        <a href="https://personal.rocketloans.com/apply" style="background-color:#DE3341; border-radius:100px; color:#FFFFFF; display:inline-block; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; font-weight:500; line-height:24px; padding:13px 24px; min-width:91px; text-align:center; text-decoration:none; -webkit-text-size-adjust:none;">See my offers</a>
+        <!--<![endif]-->
       </td>
     </tr>
 
     <!-- ========================================================
-         RED CTA BAR - copy left / outlined button right; stacks on mobile
-         Every cell is painted #DE3341: an unpainted spacer cell would render WHITE on the
-         bar in Outlook, because Word does not inherit background-color into nested tables.
+         GREY CTA BAR - copy left / outlined button right; stacks on mobile
+         Every cell is painted #F7F7F7: an unpainted spacer cell would render WHITE on
+         the bar in Outlook, because Word does not inherit background-color into nested
+         tables.
          ======================================================== -->
     <tr>
-      <td class="gutter" style="padding:24px 24px 0 24px;">
-        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#DE3341" style="background-color:#DE3341; border-radius:8px;">
+      <td class="gutter" style="padding:24px 24px 24px 24px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#F7F7F7" style="background-color:#F7F7F7; border-radius:8px;">
           <tr>
             <!-- full-bleed cell: NO background here or the 8px radius is painted over -->
             <td class="cta-pad" style="padding:32px 40px;">
-              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#DE3341" style="background-color:#DE3341;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#F7F7F7" style="background-color:#F7F7F7;">
                 <tr>
-                  <td class="stack pad-right" valign="middle" bgcolor="#DE3341" style="background-color:#DE3341; padding-right:40px; vertical-align:middle;">
-                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#DE3341" style="background-color:#DE3341;">
+                  <td class="stack pad-right" valign="middle" bgcolor="#F7F7F7" style="background-color:#F7F7F7; padding-right:40px; vertical-align:middle;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#F7F7F7" style="background-color:#F7F7F7;">
                       <tr>
-                        <td class="h-cta" bgcolor="#DE3341" style="background-color:#DE3341; padding-bottom:8px; font-family:'WNTL Display','WNTL Text',Arial,Helvetica,sans-serif; font-size:28px; line-height:31px; font-weight:600; color:#FFFFFF; mso-line-height-rule:exactly;">Ready to take the next step?</td>
+                        <td class="h-cta" bgcolor="#F7F7F7" style="background-color:#F7F7F7; padding-bottom:8px; font-family:'WNTL Display','WNTL Text',Arial,Helvetica,sans-serif; font-size:28px; line-height:31px; font-weight:600; color:#111111; mso-line-height-rule:exactly;">Clients like you save even more</td>
                       </tr>
                       <tr>
-                        <td bgcolor="#DE3341" style="background-color:#DE3341; padding-bottom:16px; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:24px; color:#FFFFFF; mso-line-height-rule:exactly;">New loan options are just a few clicks away.</td>
+                        <td bgcolor="#F7F7F7" style="background-color:#F7F7F7; padding-bottom:16px; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:24px; color:#111111; mso-line-height-rule:exactly;">Rocket Mortgage clients enjoy 4% lower rates on average.<sup style="font-size:10px;">2</sup></td>
                       </tr>
                       <tr>
-                        <td bgcolor="#DE3341" style="background-color:#DE3341;">
-                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" bgcolor="#DE3341" style="background-color:#DE3341;">
+                        <td bgcolor="#F7F7F7" style="background-color:#F7F7F7;">
+                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" bgcolor="#F7F7F7" style="background-color:#F7F7F7;">
                             <tr>
-                              <td valign="middle" width="12" bgcolor="#DE3341" style="width:12px; background-color:#DE3341; padding-right:8px;">
-                                <img src="https://framerusercontent.com/images/Ge2nzYAhbm5PZQQCScKpFAug0.png?width=36&height=36" width="12" height="12" alt="" style="display:block; border:0; width:12px; height:12px;">
+                              <td valign="middle" width="12" bgcolor="#F7F7F7" style="width:12px; background-color:#F7F7F7; padding-right:8px;">
+                                <img src="https://framerusercontent.com/images/mRetSkF4usP70JNuP2VgNGbGHA.png?width=48&height=48" width="12" height="12" alt="" style="display:block; border:0; width:12px; height:12px;">
                               </td>
-                              <td valign="middle" bgcolor="#DE3341" style="background-color:#DE3341; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:12px; line-height:16px; color:#FFFFFF; mso-line-height-rule:exactly;">Checking won&rsquo;t impact your credit score</td>
+                              <td valign="middle" bgcolor="#F7F7F7" style="background-color:#F7F7F7; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:12px; line-height:16px; color:#111111; mso-line-height-rule:exactly;">Checking won&rsquo;t impact your credit score</td>
                             </tr>
                           </table>
                         </td>
                       </tr>
                     </table>
                   </td>
-                  <td class="stack btn-full" valign="middle" align="right" width="138" bgcolor="#DE3341" style="width:138px; background-color:#DE3341; white-space:nowrap;">
+                  <td class="stack btn-full" valign="middle" align="right" width="139" bgcolor="#F7F7F7" style="width:139px; background-color:#F7F7F7; white-space:nowrap;">
                     <!--[if mso]>
-                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://personal.rocketloans.com/apply" style="height:51px; v-text-anchor:middle; width:138px;" arcsize="50%" strokecolor="#FFFFFF" strokeweight="1.5px" filled="f">
+                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://personal.rocketloans.com/apply" style="height:51px; v-text-anchor:middle; width:146px;" arcsize="50%" strokecolor="#767676" strokeweight="1.5px" fillcolor="#F7F7F7">
                       <w:anchorlock/>
-                      <center style="color:#FFFFFF; font-family:Arial,sans-serif; font-size:16px; font-weight:500;">Get started</center>
+                      <center style="color:#111111; font-family:Arial,sans-serif; font-size:16px; font-weight:500;">Check my rate</center>
                     </v:roundrect>
                     <![endif]-->
                     <!--[if !mso]><!-- -->
-                    <!-- background matches the bar so Gmail dark mode keeps the border/text pure white -->
-                    <a href="https://personal.rocketloans.com/apply" style="background-color:#DE3341; border:1.5px solid #FFFFFF; border-radius:100px; color:#FFFFFF; display:inline-block; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; font-weight:500; line-height:24px; padding:11px 24px; min-width:85px; text-align:center; text-decoration:none; -webkit-text-size-adjust:none;">Get started</a>
+                    <!-- explicit #F7F7F7 fill + #767676 border so the button stays self-contained in dark mode -->
+                    <a href="https://personal.rocketloans.com/apply" style="background-color:#F7F7F7; border:1.5px solid #767676; border-radius:100px; color:#111111; display:inline-block; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; font-weight:500; line-height:24px; padding:11px 24px; min-width:95px; text-align:center; text-decoration:none; -webkit-text-size-adjust:none;">Check my rate</a>
                     <!--<![endif]-->
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-
-    <!-- ========================================================
-         PHOTO + LIST CARD LOCKUP (image left / card right; stacks on mobile)
-         ======================================================== -->
-    <tr>
-      <td class="gutter" style="padding:24px 24px 24px 24px;">
-        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
-          <tr>
-            <td class="stack card-gap" valign="top" width="236" style="width:236px; padding-right:24px;">
-              <!-- PLACEHOLDER IMAGE - LOCKUP, DESKTOP crop (236x171, radius 8). Replace this src. -->
-              <img class="hero-d" src="https://framerusercontent.com/images/MqrGiuXwJIzQbnEKinoMGxQcKms.png?width=236&height=171" width="236" height="171" alt="" style="display:block; width:100%; max-width:236px; height:auto; border:0; border-radius:8px;">
-              <!-- PLACEHOLDER IMAGE - LOCKUP, MOBILE crop (303x190). Replace this src.
-                   Wrapped so Outlook (desktop) never shows it. -->
-              <!--[if !mso]><!-- -->
-              <img class="hero-m" src="https://framerusercontent.com/images/LSLUvFz201EYMfU2N6G4sGEge4.png?width=303&height=190" width="303" height="190" alt="" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:100%; max-width:100%; height:auto; border:0; border-radius:8px;">
-              <!--<![endif]-->
-            </td>
-            <td class="stack" valign="top" style="vertical-align:top;">
-              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#F7F7F7" style="background-color:#F7F7F7; border-radius:12px;">
-                <tr>
-                  <!-- full-bleed cell: NO background here or the 12px radius is painted over -->
-                  <td class="card-pad" style="padding:25px 40px;">
-                    <p style="margin:0 0 15px 0; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:24px; line-height:31px; font-weight:500; color:#111111; mso-line-height-rule:exactly;">Squash unnecessary payments before they happen</p>
-                    <p style="margin:0; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:22px; color:#111111; mso-line-height-rule:exactly;">Get the Rocket Money app and let your concierge cancel unwanted subscriptions for you. <a href="https://rocketmoney.sjv.io/9VZjLY" style="color:#111111; font-weight:700; text-decoration:underline;">Learn more &rarr;</a></p>
                   </td>
                 </tr>
               </table>
@@ -288,11 +258,13 @@
     <tr>
       <td class="gutter foot-pad foot-top fine" bgcolor="#F7F7F7" style="background-color:#F7F7F7; padding:40px 32px 32px 32px; font-family:'WNTL Text Condensed','Arial Narrow',Arial,Helvetica,sans-serif; font-size:10px; line-height:15px; letter-spacing:0.2px; color:#111111; mso-line-height-rule:exactly;">
 
+        <p style="margin:0 0 15px 0; font-family:'WNTL Text Condensed','Arial Narrow',Arial,Helvetica,sans-serif; font-size:10px; line-height:15px; letter-spacing:0.2px; color:#111111;">1. Same Day Funding available for clients completing the loan process and signing the Promissory Note by 4:00PM ET on a business day. Also note, the ACH credit will be submitted to your bank the same business day. This may result in same day funding, but results may vary and your bank may have rules that limit our ability to credit your account. We are not responsible for delays which may occur due to incorrect routing number, account number, or errors of your financial institution.</p>
+
+        <p style="margin:0 0 15px 0; font-family:'WNTL Text Condensed','Arial Narrow',Arial,Helvetica,sans-serif; font-size:10px; line-height:15px; letter-spacing:0.2px; color:#111111;">2. Based on internal Rocket Loans data. Rocket Mortgage serviced clients received on average 4.08% better pricing at closing from April 2025 &ndash; April 2026 than Rocket Loans clients who did not have a Rocket Mortgage mortgage.</p>
+
         <p style="margin:0 0 15px 0; font-family:'WNTL Text Condensed','Arial Narrow',Arial,Helvetica,sans-serif; font-size:10px; line-height:15px; letter-spacing:0.2px; color:#111111;">All personal loans are made by Cross River Bank, a New Jersey state chartered commercial bank, Member FDIC, Equal Housing Lender. All loans are unsecured, fully amortizing personal loans. Eligibility for a loan is not guaranteed. This is not a deposit product. Please refer to our <a href="https://www.rocketloans.com/disclosures-and-licenses" style="color:#111111; text-decoration:underline;">Disclosures and Licenses</a> page for state-required disclosures, licenses, and lending restrictions.</p>
 
         <p style="margin:0 0 15px 0; font-family:'WNTL Text Condensed','Arial Narrow',Arial,Helvetica,sans-serif; font-size:10px; line-height:15px; letter-spacing:0.2px; color:#111111;">Borrower must be a U.S. citizen or permanent U.S. resident alien at least 18 years of age. All loan applications are subject to credit review and approval. Offered loan terms depend upon your credit profile, requested amount, requested loan term, credit usage, credit history and other factors. Not all borrowers receive the lowest interest rate. To qualify for the lowest rate, you must have excellent credit, meet certain conditions, and select autopay. Rates and Terms are subject to change at any time without notice.</p>
-
-        <p style="margin:0 0 15px 0; font-family:'WNTL Text Condensed','Arial Narrow',Arial,Helvetica,sans-serif; font-size:10px; line-height:15px; letter-spacing:0.2px; color:#111111;">Rocket Mortgage, LLC, RockLoans Marketplace LLC (d/b/a Rocket Loans), Rocket Close, LLC, and Rocket Money, Inc. are separate operating subsidiaries of Rocket Limited Partnership. Redfin Corporation is an affiliated business. Each company is a separate legal entity operated and managed through its own management and governance structure. Rocket Limited Partnership and Redfin Corporation are wholly owned subsidiaries of Rocket Companies, Inc. (NYSE: RKT).</p>
 
         <p style="margin:0 0 15px 0; font-family:'WNTL Text Condensed','Arial Narrow',Arial,Helvetica,sans-serif; font-size:10px; line-height:15px; letter-spacing:0.2px; color:#111111;">Please refer to our <a href="https://www.rocketloans.com/app#/terms-of-service" style="color:#111111; text-decoration:underline;">Terms of Use</a> and please refer to <a href="https://static.rocketloans.com/disclosures/our-privacy-notice.pdf" style="color:#111111; text-decoration:underline;">Rocket Loans&rsquo; Privacy Notice</a> and <a href="https://static.rocketloans.com/disclosures/bank-privacy-notice.pdf" style="color:#111111; text-decoration:underline;">CrossRiver&rsquo;s Privacy Notice</a> to learn more about what we do with your personal information.</p>
 
