@@ -97,7 +97,7 @@
     /* the hero photo swaps to its own mobile crop */
     .hero-bg      { background-image:url('https://framerusercontent.com/images/4zrARBdaKIkoO1SLpb1rqL552E.jpg?width=700&height=926') !important; background-position:center top !important; }
     .lau-d        { display:none !important; max-height:0 !important; overflow:hidden !important; }
-    .lau-m        { display:block !important; max-height:none !important; overflow:visible !important; width:295px !important; max-width:100% !important; height:auto !important; }
+    .lau-m        { display:block !important; margin:0 auto !important; max-height:none !important; overflow:visible !important; width:295px !important; max-width:100% !important; height:auto !important; }
     /* the Figma MOBILE frame spaces the content blocks 26px apart (desktop 24) */
     .gap26        { padding-top:26px !important; }
     /* RMSV CTA bar on mobile: 32px padding, title / full-width button / check line, 20px apart */
@@ -255,16 +255,16 @@
     </tr>
 
     <!-- ========================================================
-         LAUREL ROW - on white, 752x57 desktop / 295x43 mobile, left aligned
+         LAUREL ROW - on white, 752x57 desktop / 295x43 mobile, centred on mobile (QA)
          ======================================================== -->
     <tr>
-      <td class="gutter gap26" style="padding:24px 24px 0 24px;">
+      <td class="gutter gap26" align="center" style="padding:24px 24px 0 24px;">
         <!-- LAUREL ROW, DESKTOP (752x57, Figma node 318:2622). -->
         <img class="lau-d" src="https://framerusercontent.com/images/5V9l8sHKx5WlIVARwO9N2dJ1rEk.png?width=1504&height=114" width="752" height="57" alt="4.9/5 on Trustpilot &middot; A+ rating with the BBB &middot; 5/5 on Credit Karma" style="display:block; width:100%; max-width:752px; height:auto; border:0;">
         <!-- LAUREL ROW, MOBILE (295x43, Figma node 307:1098).
              Wrapped so Outlook (desktop) never shows it. -->
         <!--[if !mso]><!-- -->
-        <img class="lau-m" src="https://framerusercontent.com/images/sWVdWG4JiUUEicBiZYxroVpnms.png?width=592&height=86" width="295" height="43" alt="4.9/5 on Trustpilot &middot; A+ rating with the BBB &middot; 5/5 on Credit Karma" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:295px; height:auto; border:0;">
+        <img class="lau-m" src="https://framerusercontent.com/images/sWVdWG4JiUUEicBiZYxroVpnms.png?width=592&height=86" width="295" height="43" alt="4.9/5 on Trustpilot &middot; A+ rating with the BBB &middot; 5/5 on Credit Karma" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:295px; height:auto; border:0; margin:0 auto;">
         <!--<![endif]-->
       </td>
     </tr>
@@ -315,11 +315,11 @@
                     <!--<![endif]-->
                   </td>
                 </tr>
-                <!-- mobile: the check line moves under the full-width button, left-aligned -->
+                <!-- mobile: the check line moves under the full-width button, centred (QA) -->
                 <!--[if !mso]><!-- -->
                 <tr>
-                  <td class="m-only" colspan="2" align="left" bgcolor="#DE3341" style="display:none; max-height:0; overflow:hidden; mso-hide:all; background-color:#DE3341;">
-                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="left" bgcolor="#DE3341" style="background-color:#DE3341;">
+                  <td class="m-only" colspan="2" align="center" bgcolor="#DE3341" style="display:none; max-height:0; overflow:hidden; mso-hide:all; background-color:#DE3341;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" bgcolor="#DE3341" style="margin:0 auto; background-color:#DE3341;">
                       <tr>
                         <td valign="middle" width="12" bgcolor="#DE3341" style="width:12px; background-color:#DE3341; padding-right:8px;">
                           <img src="https://framerusercontent.com/images/Ge2nzYAhbm5PZQQCScKpFAug0.png?width=36&height=36" width="12" height="12" alt="" style="display:block; border:0; width:12px; height:12px;">
