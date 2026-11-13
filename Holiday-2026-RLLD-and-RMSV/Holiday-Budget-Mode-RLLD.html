@@ -1,0 +1,354 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="x-apple-disable-message-reformatting">
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
+<title>It&rsquo;s dough time</title>
+
+<!--
+  Holiday 2026 (RLLD) - Email 1 "Need Dough".
+  Built from Figma file 63bLjldU25JLaylchmrkbU, page R2, section EM1 (node 307:813)
+  (desktop frame 307:2890 / mobile frame 307:814).
+    SL: It's dough time
+    PH: Smart financing = comfort, joy, and no credit card interest.
+
+  Figma measurements carried over:
+    - 24px rhythm between sections, 24px body gutters; desktop header uses 20px, mobile 24px
+    - hero is a red #DE3341 "switch" panel, radius 8: 752 wide inside the gutters on
+      desktop, full bleed (no gutters, no gap under the header) on mobile. Inside it:
+      title 33/34 DemiBold at 38px from the top, the toggle strip, subtitle 16/19 Medium,
+      then a black 186x46 button 17px below with 37px under it - 387px in both frames
+    - body 16/22.4 desktop -> 16/24 mobile; buttons 48px tall
+    - RTBs: three #F7F7F7 cards 240 wide, 16px apart, radius 8 (12 on mobile), padding 16,
+      24px check icon, 16/21 DemiBold - they stack on mobile with 16px between
+    - reviews: two #F7F7F7 cards 364 wide, 24px apart, radius 8, padding 32/40 - stack on
+      mobile. The Figma MOBILE frame spaces its stacked blocks 25px apart (desktop 24).
+    - footer #F7F7F7: EHL first, then the disclaimer 32px below; 40/32 padding desktop ->
+      32/20 mobile
+    - totals: Figma 1562px desktop / 2193px mobile
+
+  THE HERO TOGGLE IS ANIMATED in Figma (8s loop desktop, 6s mobile): the white pill fades
+  from 50% to 100% and the cookie slides from the pill's left end to its right end in
+  ~0.7s, then holds "on". Only the strip between the title and the subtitle (y 106-249 of
+  the panel) moves, so only that strip is an image - the title, subtitle and button stay
+  live text. The cookie's visible art sits at y 132-218, inside the strip.
+  Outlook (Word) only ever shows a GIF's first frame, which is the "off" state, so Outlook
+  gets a static PNG of the "on" state instead.
+
+  PLACEHOLDERS: three new images. Each src below is marked PLACEHOLDER IMAGE - swap all
+  three for hosted assets. All three were rendered at 2x from the Figma source (the cookie
+  PNG, pill and inner shadow, and the keyframes of the Figma timeline):
+      1. hero toggle GIF, desktop      752x143  (1504x286 file)
+      2. hero toggle GIF, mobile       350x143  (700x286 file)
+      3. hero toggle "on" PNG, Outlook 752x143  (1504x286 file)
+  Everything else (logos, check icons, Trustpilot stars, EHL badge) is already hosted.
+-->
+
+<!--[if mso]>
+<noscript><xml>
+  <o:OfficeDocumentSettings>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+    <o:AllowPNG/>
+  </o:OfficeDocumentSettings>
+</xml></noscript>
+<style>
+  table, td, div, h1, h2, h3, p, a, span { font-family: Arial, sans-serif !important; }
+  .fine, .fine p, .fine a, .fine span { font-family: 'Arial Narrow', Arial, sans-serif !important; }
+</style>
+<![endif]-->
+
+<!--[if mso]>
+<style type="text/css">
+  v\:textbox, o\:smarttagtype { display:none !important; }
+  a:link, span.msoIns, span.msoDel { text-decoration:none !important; }
+</style>
+<![endif]-->
+
+<style type="text/css">
+  @font-face { font-family:'WNTL Text';    src:url('https://www.rocketmortgage.com/nsassets/fonts/wntl/WNTL_Text_Web_Regular.woff2')     format('woff2'); font-weight:400; font-style:normal; }
+  @font-face { font-family:'WNTL Text';    src:url('https://www.rocketmortgage.com/nsassets/fonts/wntl/WNTL_Text_Web_Medium.woff2')      format('woff2'); font-weight:500; font-style:normal; }
+
+  html, body { margin:0 !important; padding:0 !important; height:100% !important; width:100% !important; }
+  * { -ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; }
+  table, td { mso-table-lspace:0pt !important; mso-table-rspace:0pt !important; border-collapse:collapse !important; }
+  img { -ms-interpolation-mode:bicubic; border:0; height:auto; line-height:100%; outline:none; text-decoration:none; }
+  a { text-decoration:none; }
+  u + #body a, #MessageViewBody a { color:inherit; text-decoration:none; font-size:inherit; font-family:inherit; font-weight:inherit; line-height:inherit; }
+
+  @media screen and (max-width:820px) {
+    .wrap { width:100% !important; max-width:100% !important; }
+  }
+
+  @media screen and (max-width:640px) {
+    .stack        { width:100% !important; display:block !important; max-width:100% !important; box-sizing:border-box !important; }
+    .gutter       { padding-left:24px !important; padding-right:24px !important; box-sizing:border-box !important; }
+    .btn-full a   { display:block !important; width:auto !important; text-align:center !important; }
+    .btn-full table { width:100% !important; }
+    /* mobile header from the Figma MOBILE frame: 24px gutters, stacked 102x32 logo */
+    .head-pad     { padding-left:24px !important; padding-right:24px !important; border-bottom-color:#EBEBEB !important; }
+    .vo-d         { display:none !important; }
+    .vo-m         { display:inline !important; max-height:none !important; overflow:visible !important; }
+    .head-logo    { padding:29px 0 !important; }
+    .logo-d       { display:none !important; max-height:0 !important; overflow:hidden !important; }
+    .logo-m       { display:block !important; max-height:none !important; overflow:visible !important; }
+    /* the hero panel goes full bleed on mobile, straight under the header */
+    .hero-pad     { padding:0 !important; }
+    .hero-d       { display:none !important; max-height:0 !important; overflow:hidden !important; }
+    .hero-m       { display:block !important; max-height:none !important; overflow:visible !important; width:100% !important; height:auto !important; }
+    .body-copy    { line-height:24px !important; }
+    .p-gap        { margin-bottom:24px !important; }
+    .rtb-card     { border-radius:12px !important; }
+    /* spacer cells become the gaps between the stacked cards */
+    .rtb-gap      { height:16px !important; font-size:16px !important; line-height:16px !important; display:block !important; width:100% !important; }
+    .rev-gap      { height:25px !important; font-size:25px !important; line-height:25px !important; display:block !important; width:100% !important; }
+    /* the Figma MOBILE frame spaces the stacked content blocks 25px apart (desktop 24) */
+    .gap25        { padding-top:25px !important; }
+    .foot-pad     { padding-left:20px !important; padding-right:20px !important; }
+    .foot-top     { padding-top:32px !important; }
+    .foot-bot     { padding-bottom:32px !important; }
+  }
+</style>
+</head>
+
+<body id="body" style="margin:0; padding:0; width:100%; background-color:#F5F5F5;">
+
+<!-- PREHEADER -->
+<div style="display:none; font-size:1px; line-height:1px; max-height:0; max-width:0; opacity:0; overflow:hidden; mso-hide:all; font-family:Arial,sans-serif; color:#FFFFFF !important;background-color: none !important;">
+  Smart financing = comfort, joy, and no credit card interest.
+  &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847; &#8203;&#847;
+</div>
+
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#F5F5F5" style="background-color:#F5F5F5;">
+<tr>
+<td align="center" style="padding:0;">
+
+  <!--[if mso]><table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" width="800"><tr><td><![endif]-->
+
+  <!-- width=100% + inline max-width keeps the shell fluid even if a client drops the <style> block -->
+  <table role="presentation" class="wrap" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#FFFFFF" style="width:100%; max-width:800px; margin:0 auto; background-color:#FFFFFF;">
+
+    <!-- ========================================================
+         HEADER - 20px gutters desktop, 24px mobile
+         ======================================================== -->
+    <tr>
+      <td class="head-pad" style="padding:0 20px; height:90px; border-bottom:1px solid #E9E9E9;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+          <tr>
+            <td class="head-logo" align="left" valign="middle" style="padding:33px 0;">
+              <a href="https://www.rocketloans.com/" style="text-decoration:none; border:0;"><img src="https://framerusercontent.com/images/tu166SmwTWTOOIe92b9naywA4.png?width=456&height=48" width="228" height="24" alt="Rocket Loans" class="logo-d" style="display:block; width:228px; height:24px; border:0;"></a>
+              <!-- mobile uses the stacked logo, 102x32 in Figma -->
+              <!--[if !mso]><!-- -->
+              <a href="https://www.rocketloans.com/" style="text-decoration:none; border:0;"><img src="https://framerusercontent.com/images/f5z7Va2SUwiUtrTRTOQVabKLzKo.png?width=205&height=64" width="102" height="32" alt="Rocket Loans" class="logo-m" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:102px; height:32px; border:0;"></a>
+              <!--<![endif]-->
+            </td>
+            <td align="right" valign="middle" style="font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:12px; line-height:16px; color:#707070;">
+              <a class="vo-d" href="https://www.rocketloans.com/" style="color:#707070; text-decoration:underline;">View Online</a>
+              <!-- mobile frame reads "View online", Medium -->
+              <!--[if !mso]><!-- -->
+              <a class="vo-m" href="https://www.rocketloans.com/" style="display:none; max-height:0; overflow:hidden; mso-hide:all; color:#707070; font-weight:500; text-decoration:underline;">View online</a>
+              <!--<![endif]-->
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- ========================================================
+         HERO - red "Holiday budget mode" switch panel, radius 8
+         Title, subtitle and button are live text; only the toggle strip is an image.
+         ======================================================== -->
+    <tr>
+      <td class="hero-pad" style="padding:24px 24px 0 24px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#DE3341" style="background-color:#DE3341; border-radius:8px;">
+          <tr>
+            <!-- full-bleed cell: NO background here or the 8px radius is painted over -->
+            <td align="center" style="padding:38px 24px 0 24px; font-family:'WNTL Display','WNTL Text',Arial,Helvetica,sans-serif; font-size:33px; line-height:34px; font-weight:600; letter-spacing:0.33px; color:#FFFFFF; text-align:center; mso-line-height-rule:exactly;">Holiday<br>budget mode</td>
+          </tr>
+          <tr>
+            <td bgcolor="#DE3341" style="background-color:#DE3341; font-size:0; line-height:0;">
+              <!--[if mso]>
+              <img src="https://placehold.co/1504x286/E9E9E9/707070.png?text=Hero+toggle+ON+still+(Outlook)+752x143" width="752" height="143" alt="" style="display:block; width:752px; height:143px; border:0;">
+              <![endif]-->
+              <!--[if !mso]><!-- -->
+              <!-- PLACEHOLDER IMAGE - HERO TOGGLE GIF, DESKTOP (752x143). Replace this src. -->
+              <img class="hero-d" src="https://placehold.co/1504x286/E9E9E9/707070.png?text=Hero+toggle+GIF+desktop+752x143" width="752" height="143" alt="" style="display:block; width:100%; max-width:752px; height:auto; border:0;">
+              <!-- PLACEHOLDER IMAGE - HERO TOGGLE GIF, MOBILE (350x143). Replace this src. -->
+              <img class="hero-m" src="https://placehold.co/700x286/E9E9E9/707070.png?text=Hero+toggle+GIF+mobile+350x143" width="350" height="143" alt="" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:100%; max-width:100%; height:auto; border:0;">
+              <!--<![endif]-->
+            </td>
+          </tr>
+          <tr>
+            <td align="center" bgcolor="#DE3341" style="background-color:#DE3341; padding:0 24px; font-family:'WNTL Display','WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:19px; font-weight:500; color:#FFFFFF; text-align:center; mso-line-height-rule:exactly;">Start the season with extra dough.<br>Finish it without credit card debt.</td>
+          </tr>
+          <tr>
+            <!-- full-bleed cell: NO background here or the 8px radius is painted over -->
+            <td align="center" style="padding:17px 24px 37px 24px;">
+              <!--[if mso]>
+              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://personal.rocketloans.com/apply" style="height:46px; v-text-anchor:middle; width:186px;" arcsize="50%" stroke="f" fillcolor="#111111">
+                <w:anchorlock/>
+                <center style="color:#FFFFFF; font-family:Arial,sans-serif; font-size:15px; font-weight:500;">See offers risk-free</center>
+              </v:roundrect>
+              <![endif]-->
+              <!--[if !mso]><!-- -->
+              <table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate !important; margin:0 auto;"><tr><td align="center" bgcolor="#111111" style="background-color:#111111; border-radius:100px; padding:12px 23px; white-space:nowrap; mso-padding-alt:0;"><a href="https://personal.rocketloans.com/apply" style="color:#FFFFFF; display:inline-block; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:15px; font-weight:500; line-height:22px; text-align:center; text-decoration:none; white-space:nowrap; -webkit-text-size-adjust:none;">See offers risk-free</a></td></tr></table>
+              <!--<![endif]-->
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- ========================================================
+         BODY COPY + RED CTA - 24px apart
+         ======================================================== -->
+    <tr>
+      <td class="gutter body-copy" style="padding:24px 24px 0 24px; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:22.4px; color:#111111; mso-line-height-rule:exactly;">
+        <p class="p-gap" style="margin:0 0 22.4px 0;">{FNAME},</p>
+        <p style="margin:0;">Take credit card interest and installment plans off your plate with one simple, fixed-rate personal loan. Funded as soon as today.<sup style="font-size:10px; line-height:0;">1</sup> Done in as little as 36 payments.</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="gutter btn-full" style="padding:24px 24px 0 24px;">
+        <!--[if mso]>
+        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://personal.rocketloans.com/apply" style="height:48px; v-text-anchor:middle; width:132px;" arcsize="50%" stroke="f" fillcolor="#DE3341">
+          <w:anchorlock/>
+          <center style="color:#FFFFFF; font-family:Arial,sans-serif; font-size:16px; font-weight:500;">Get started</center>
+        </v:roundrect>
+        <![endif]-->
+        <!--[if !mso]><!-- -->
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate !important;"><tr><td align="center" bgcolor="#DE3341" style="background-color:#DE3341; border-radius:100px; padding:12px 24px; white-space:nowrap; mso-padding-alt:0;"><a href="https://personal.rocketloans.com/apply" style="color:#FFFFFF; display:inline-block; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; font-weight:500; line-height:24px; text-align:center; text-decoration:none; white-space:nowrap; -webkit-text-size-adjust:none;">Get started</a></td></tr></table>
+        <!--<![endif]-->
+      </td>
+    </tr>
+
+    <!-- ========================================================
+         RTBs - three grey cards, 16px apart; stack on mobile
+         ======================================================== -->
+    <tr>
+      <td class="gutter gap25" style="padding:24px 24px 0 24px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+          <tr>
+            <td class="stack rtb-card" valign="middle" width="240" bgcolor="#F7F7F7" style="width:240px; background-color:#F7F7F7; border-radius:8px; padding:16px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#F7F7F7" style="background-color:#F7F7F7;">
+                <tr>
+                  <td valign="middle" width="24" bgcolor="#F7F7F7" style="width:24px; background-color:#F7F7F7; padding-right:16px;">
+                    <!-- check_circle icon on #F7F7F7, 80x80 source -->
+                    <img src="https://framerusercontent.com/images/wHHdbkGNDyMHmfs4wg58Z7RgnH4.png?width=80&height=80" width="24" height="24" alt="" style="display:block; border:0; width:24px; height:24px;">
+                  </td>
+                  <td valign="middle" bgcolor="#F7F7F7" style="background-color:#F7F7F7; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:21px; font-weight:600; color:#111111; mso-line-height-rule:exactly;">100% online</td>
+                </tr>
+              </table>
+            </td>
+            <td class="stack rtb-gap" width="16" style="width:16px; font-size:0; line-height:0;">&nbsp;</td>
+            <td class="stack rtb-card" valign="middle" width="240" bgcolor="#F7F7F7" style="width:240px; background-color:#F7F7F7; border-radius:8px; padding:16px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#F7F7F7" style="background-color:#F7F7F7;">
+                <tr>
+                  <td valign="middle" width="24" bgcolor="#F7F7F7" style="width:24px; background-color:#F7F7F7; padding-right:16px;">
+                    <!-- check_circle icon on #F7F7F7, 80x80 source -->
+                    <img src="https://framerusercontent.com/images/wHHdbkGNDyMHmfs4wg58Z7RgnH4.png?width=80&height=80" width="24" height="24" alt="" style="display:block; border:0; width:24px; height:24px;">
+                  </td>
+                  <td valign="middle" bgcolor="#F7F7F7" style="background-color:#F7F7F7; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:21px; font-weight:600; color:#111111; mso-line-height-rule:exactly;">No hidden fees</td>
+                </tr>
+              </table>
+            </td>
+            <td class="stack rtb-gap" width="16" style="width:16px; font-size:0; line-height:0;">&nbsp;</td>
+            <td class="stack rtb-card" valign="middle" width="240" bgcolor="#F7F7F7" style="width:240px; background-color:#F7F7F7; border-radius:8px; padding:16px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#F7F7F7" style="background-color:#F7F7F7;">
+                <tr>
+                  <td valign="middle" width="24" bgcolor="#F7F7F7" style="width:24px; background-color:#F7F7F7; padding-right:16px;">
+                    <!-- check_circle icon on #F7F7F7, 80x80 source -->
+                    <img src="https://framerusercontent.com/images/wHHdbkGNDyMHmfs4wg58Z7RgnH4.png?width=80&height=80" width="24" height="24" alt="" style="display:block; border:0; width:24px; height:24px;">
+                  </td>
+                  <td valign="middle" bgcolor="#F7F7F7" style="background-color:#F7F7F7; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:21px; font-weight:600; color:#111111; mso-line-height-rule:exactly;">U.S.-based support</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- ========================================================
+         REVIEWS - two grey cards, 24px apart; stack on mobile
+         ======================================================== -->
+    <tr>
+      <td class="gutter gap25" style="padding:24px 24px 0 24px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+          <tr>
+            <td class="stack" valign="middle" width="364" bgcolor="#F7F7F7" style="width:364px; background-color:#F7F7F7; border-radius:8px; padding:32px 40px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" bgcolor="#F7F7F7" style="background-color:#F7F7F7;">
+                <tr><td bgcolor="#F7F7F7" style="background-color:#F7F7F7; padding-bottom:16px;"><img src="https://framerusercontent.com/images/HHQSQpVV1UeS7YOY4yq7vdEOXA.png?width=173&height=32" width="86" height="16" alt="&#9733;&#9733;&#9733;&#9733;&#9733;" style="display:block; border:0; width:86px; height:auto;"></td></tr>
+              </table>
+              <p style="margin:0 0 8px 0; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:21px; color:#111111; mso-line-height-rule:exactly;">&ldquo;Unbelievable! No effort to do, and it works with my plans. This just saved Christmas.&rdquo;</p>
+              <p style="margin:0; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:21px; font-weight:500; color:#111111; mso-line-height-rule:exactly;">&ndash; Robert</p>
+            </td>
+            <td class="stack rev-gap" width="24" style="width:24px; font-size:0; line-height:0;">&nbsp;</td>
+            <td class="stack" valign="middle" width="364" bgcolor="#F7F7F7" style="width:364px; background-color:#F7F7F7; border-radius:8px; padding:32px 40px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" bgcolor="#F7F7F7" style="background-color:#F7F7F7;">
+                <tr><td bgcolor="#F7F7F7" style="background-color:#F7F7F7; padding-bottom:16px;"><img src="https://framerusercontent.com/images/HHQSQpVV1UeS7YOY4yq7vdEOXA.png?width=173&height=32" width="86" height="16" alt="&#9733;&#9733;&#9733;&#9733;&#9733;" style="display:block; border:0; width:86px; height:auto;"></td></tr>
+              </table>
+              <p style="margin:0 0 8px 0; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:21px; color:#000000; mso-line-height-rule:exactly;">&ldquo;Very easy process. Good variety of choices that fit your budget.&rdquo;</p>
+              <p style="margin:0; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; line-height:21px; font-weight:500; color:#111111; mso-line-height-rule:exactly;">&ndash; Nicholas</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- CLOSING CTA -->
+    <tr>
+      <td class="gutter btn-full gap25" style="padding:24px 24px 24px 24px;">
+        <!--[if mso]>
+        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://personal.rocketloans.com/apply" style="height:48px; v-text-anchor:middle; width:152px;" arcsize="50%" stroke="f" fillcolor="#DE3341">
+          <w:anchorlock/>
+          <center style="color:#FFFFFF; font-family:Arial,sans-serif; font-size:16px; font-weight:500;">See my offers</center>
+        </v:roundrect>
+        <![endif]-->
+        <!--[if !mso]><!-- -->
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate !important;"><tr><td align="center" bgcolor="#DE3341" style="background-color:#DE3341; border-radius:100px; padding:12px 24px; white-space:nowrap; mso-padding-alt:0;"><a href="https://personal.rocketloans.com/apply" style="color:#FFFFFF; display:inline-block; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:16px; font-weight:500; line-height:24px; text-align:center; text-decoration:none; white-space:nowrap; -webkit-text-size-adjust:none;">See my offers</a></td></tr></table>
+        <!--<![endif]-->
+      </td>
+    </tr>
+
+    <!-- ========================================================
+         FOOTER - EHL first, disclaimer 32px below (per the Figma footer component)
+         ======================================================== -->
+    <tr>
+      <td class="gutter foot-pad foot-top" bgcolor="#F7F7F7" style="background-color:#F7F7F7; padding:40px 32px 0 32px;">
+        <img src="https://framerusercontent.com/images/Je05IYQq7H9Lpu6KkOOuHfD0JRM.png?width=154&amp;height=138" width="62" height="62" alt="Equal Housing Lender" style="display:block; border:0;">
+      </td>
+    </tr>
+    <tr>
+      <td class="gutter foot-pad foot-bot fine" bgcolor="#F7F7F7" style="background-color:#F7F7F7; padding:32px 32px 40px 32px; font-family:'WNTL Text Condensed','Arial Narrow',Arial,Helvetica,sans-serif; font-size:10px; line-height:15px; letter-spacing:0.2px; color:#111111; mso-line-height-rule:exactly;">
+
+        <p style="margin:0 0 15px 0; font-family:'WNTL Text Condensed','Arial Narrow',Arial,Helvetica,sans-serif; font-size:10px; line-height:15px; letter-spacing:0.2px; color:#111111;">1. Same Day Funding available for clients completing the loan process and signing the Promissory Note by 4:00PM ET on a business day. Also note, the ACH credit will be submitted to your bank the same business day. This may result in same day funding, but results may vary and your bank may have rules that limit our ability to credit your account. We are not responsible for delays which may occur due to incorrect routing number, account number, or errors of your financial institution.</p>
+
+        <p style="margin:0 0 15px 0; font-family:'WNTL Text Condensed','Arial Narrow',Arial,Helvetica,sans-serif; font-size:10px; line-height:15px; letter-spacing:0.2px; color:#111111;">All personal loans are made by Cross River Bank, a New Jersey state chartered commercial bank, Member FDIC, Equal Housing Lender. All loans are unsecured, fully amortizing personal loans. Eligibility for a loan is not guaranteed. This is not a deposit product. Please refer to our <a href="https://www.rocketloans.com/disclosures-and-licenses" style="color:#111111; text-decoration:underline;">Disclosures and Licenses</a> page for state-required disclosures, licenses, and lending restrictions.</p>
+
+        <p style="margin:0 0 15px 0; font-family:'WNTL Text Condensed','Arial Narrow',Arial,Helvetica,sans-serif; font-size:10px; line-height:15px; letter-spacing:0.2px; color:#111111;">Qualified clients using Rocket Loans will see loan options for a 36 or 60 month term, and APR ranges from a minimum of 7.99% (rate with autopay discount) to a maximum of 29.99% (rate without autopay discount) depending upon their credit profile. An origination fee of up to 9.99% is charged for each loan. This fee is deducted from the balance before funds are disbursed to the client. For example, a 5-year $16,000 loan with a 14.55% interest rate and a 6.95% ($1,112) origination fee would have 59 scheduled monthly payments of approximately $376.83 and 1 final monthly payment of approximately $399.09 for an APR of 17.90%. Borrower must be a U.S. citizen or permanent U.S. resident at least 18 years of age. All loan applications are subject to credit review and approval and offered loan terms depend upon credit score, requested amount, requested loan term, credit usage, credit history and other factors. Not all borrowers receive the lowest interest rate or highest loan amount. To qualify for the lowest rate, you must have excellent credit, meet certain conditions, and select autopay. Rates and Terms are subject to change at any time without notice.</p>
+
+        <p style="margin:0 0 15px 0; font-family:'WNTL Text Condensed','Arial Narrow',Arial,Helvetica,sans-serif; font-size:10px; line-height:15px; letter-spacing:0.2px; color:#111111;">Please refer to our <a href="https://www.rocketloans.com/app#/terms-of-service" style="color:#111111; text-decoration:underline;">Terms of Use</a> and please refer to <a href="https://static.rocketloans.com/disclosures/our-privacy-notice.pdf" style="color:#111111; text-decoration:underline;">Rocket Loans&rsquo; Privacy Notice</a> and <a href="https://static.rocketloans.com/disclosures/bank-privacy-notice.pdf" style="color:#111111; text-decoration:underline;">CrossRiver&rsquo;s Privacy Notice</a> to learn more about what we do with your personal information.</p>
+
+        <p style="margin:0 0 15px 0; font-family:'WNTL Text Condensed','Arial Narrow',Arial,Helvetica,sans-serif; font-size:10px; line-height:15px; letter-spacing:0.2px; color:#111111;">Clients featured in imagery are clients of the Rocket family of companies and may not be clients of Rocket Loans.</p>
+
+        <p style="margin:0 0 15px 0; font-family:'WNTL Text Condensed','Arial Narrow',Arial,Helvetica,sans-serif; font-size:10px; line-height:15px; letter-spacing:0.2px; color:#111111;">To no longer receive emails from Rocket Loans, <a href="https://www.rocketloans.com/app?j=232859&amp;sfmc_sub=198761599&amp;l=18_HTML&amp;u=2125569&amp;mid=100017476&amp;jb=1#/unsubscribe" style="color:#111111; text-decoration:underline;">unsubscribe here</a>.</p>
+
+        <p style="margin:0; font-family:'WNTL Text Condensed','Arial Narrow',Arial,Helvetica,sans-serif; font-size:10px; line-height:15px; letter-spacing:0.2px; color:#111111;">Rocket Loans | 1050 Woodward Ave., Detroit, MI 48226</p>
+
+      </td>
+    </tr>
+
+  </table>
+
+  <!--[if mso]></td></tr></table><![endif]-->
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>
