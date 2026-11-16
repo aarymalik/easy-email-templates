@@ -149,6 +149,9 @@
          HERO - full-bleed photo panel, radius 8, live text and button on top.
          Background image: CSS for most clients, VML for Outlook; #2F533C behind it so the
          white text is still readable with images off.
+         The hero button is plain HTML in every client, Outlook included: Outlook cannot nest a
+         VML button inside the VML background (it breaks the whole layout), so it shows this one
+         with square corners.
          ======================================================== -->
     <tr>
       <!-- HERO BACKGROUND, DESKTOP (800x463) - the same url appears
@@ -160,6 +163,7 @@
           <v:fill type="frame" src="https://framerusercontent.com/images/Lw64PvrfVgQhPGTre4DA3aijvE.jpg?width=1600&height=926" color="#2F533C" />
           <v:textbox inset="0,0,0,0">
         <![endif]-->
+        <div>
         <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
           <tr>
             <td class="ink-w" align="center" style="padding:30px 24px 0 24px; font-family:'WNTL Display','WNTL Text',Arial,Helvetica,sans-serif; font-size:25.37px; line-height:26.13px; font-weight:600; letter-spacing:0.25px; color:#FFFFFF; text-align:center; mso-line-height-rule:exactly;">Credit cards<br>getting ugly?</td>
@@ -169,18 +173,11 @@
           </tr>
           <tr>
             <td align="center" style="padding:260px 24px 27px 24px;">
-              <!--[if mso]>
-              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://personal.rocketloans.com/apply" style="height:46px; v-text-anchor:middle; width:173px;" arcsize="50%" stroke="f" fillcolor="#DE3341">
-                <w:anchorlock/>
-                <center style="color:#FFFFFF; font-family:Arial,sans-serif; font-size:15px; font-weight:500;">Consolidate today</center>
-              </v:roundrect>
-              <![endif]-->
-              <!--[if !mso]><!-- -->
-              <table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate !important; margin:0 auto;"><tr><td align="center" bgcolor="#DE3341" style="background-color:#DE3341; border-radius:100px; padding:12px 23px; white-space:nowrap; mso-padding-alt:0;"><a target="_blank" href="https://personal.rocketloans.com/apply" style="color:#FFFFFF; display:inline-block; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:15px; font-weight:500; line-height:22px; text-align:center; text-decoration:none; white-space:nowrap; -webkit-text-size-adjust:none;">Consolidate today</a></td></tr></table>
-              <!--<![endif]-->
+              <table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate !important; margin:0 auto;"><tr><td align="center" bgcolor="#DE3341" style="background-color:#DE3341; border-radius:100px; padding:12px 23px; white-space:nowrap;"><a target="_blank" href="https://personal.rocketloans.com/apply" style="color:#FFFFFF; display:inline-block; font-family:'WNTL Text',Arial,Helvetica,sans-serif; font-size:15px; font-weight:500; line-height:22px; text-align:center; text-decoration:none; white-space:nowrap; -webkit-text-size-adjust:none;">Consolidate today</a></td></tr></table>
             </td>
           </tr>
         </table>
+        </div>
         <!--[if gte mso 9]>
           </v:textbox>
         </v:rect>
